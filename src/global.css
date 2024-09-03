@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply bg-slate-950;
+}
+
+.nav-icon {
+  @apply text-xl cursor-pointer;
+}
+
+.bg-primary {
+  @apply bg-blue-800;
+}
