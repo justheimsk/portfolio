@@ -2,8 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  z-index: 2;
+  cursor: none !important;
+}
+
 body {
   @apply bg-slate-950;
+  z-index: 1;
 }
 
 .nav-icon {
@@ -12,4 +18,20 @@ body {
 
 .bg-primary {
   @apply bg-blue-800;
+}
+
+#stars {
+  position: absolute;
+  top: 32px;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+#cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  pointer-events: none;
 }
