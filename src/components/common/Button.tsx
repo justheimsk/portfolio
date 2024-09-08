@@ -1,5 +1,5 @@
 export type ButtonStyles = "normal" | "outline";
-export type ButtonRounded = "rounded-sm" | "rounded-md" | "rounded-lg" | "rounded-xl" | "rounded-full";
+export type ButtonRounded = "rounded-none" | "rounded-sm" | "rounded-md" | "rounded-lg" | "rounded-xl" | "rounded-full";
 
 export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   bStyle?: ButtonStyles;

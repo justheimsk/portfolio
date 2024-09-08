@@ -12,8 +12,11 @@ import { RiNextjsFill } from 'react-icons/ri';
 import { TbBrandCpp } from 'react-icons/tb';
 import { BiLogoPostgresql, BiLogoTypescript } from 'react-icons/bi';
 import { SiTailwindcss } from 'react-icons/si';
+import { useTranslation } from 'react-i18next';
 
 const App = () => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     try {
     const effects = [new Stars({ elId: "stars", maxHeight: 800, rendererOptions: { alpha: true, antialias: true, precision: 'lowp' }, clearColor: new Color(0xffffff) }), new CustomCursor()];
@@ -29,7 +32,7 @@ const App = () => {
 
   return (
     <>
-      <UpperNavbar content="Available for Hire" />
+      <UpperNavbar content={t('uppernavbar')} />
       <Navbar />
       <Container>
         <Section className="ignore-nav flex items-center text-white justify-center">
@@ -45,11 +48,11 @@ const App = () => {
             <SiTailwindcss />
             <BiLogoPostgresql />
           </div>
-          <h2 className="text-5xl font-bold">A non-standard <span className="text-blue-600">Fullstack</span> developer</h2>
-          <p className="max-w-[500px] text-sm text-gray-300">Hello! I’m a fullstack developer passionate about creating innovative and efficient solutions. With expertise in various technologies, I’m always looking for new challenges and opportunities to turn ideas into reality.</p>
+          <h2 className="text-5xl font-bold">{t('title')}</h2>
+          <p className="max-w-[500px] text-sm text-gray-300">{t('subtitle')}</p>
           <div className="flex items-center gap-4">
-            <Button bStyle="outline">Explore my projects</Button>
-            <Button>Download resume</Button>
+            <Button bStyle="outline">{t("buttons.projects")}</Button>
+            <Button>{t("buttons.resume")} <FaDownload /></Button>
           </div>
         </div>
         </Section>

@@ -4,9 +4,11 @@ import { Button } from '../common/Button';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { FaTimes } from 'react-icons/fa';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export function Navbar() {
   const [active, setActive] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <>
@@ -19,7 +21,7 @@ export function Navbar() {
             <span className="font-semibold">Vonderheimsk</span>
             <div className="flex items-center gap-2">
               <Button rounded="rounded-full" className="font-semibold text-[12px] px-2 py-0.5">
-                Baixar curriculo
+                {t('buttons.resume')}
               </Button>
               <RxHamburgerMenu onClick={() => setActive(!active)} className="cursor-pointer text-xl" />
             </div>
@@ -43,7 +45,7 @@ export function Navbar() {
               <FaGithub className="nav-icon" />
             </a>
             <FaDiscord className="nav-icon text-[#5865F2]" />
-            <Button rounded="rounded-full">Download resume</Button>
+            <Button rounded="rounded-full">{t('buttons.resume')}</Button>
           </div>
         </div>
       </Container>
@@ -57,12 +59,14 @@ export interface NavbarLinkProps
 }
 
 export function NavbarMenu() {
+  const { t } = useTranslation();
+
   return (
     <>
-      <NavbarLink active>Home</NavbarLink>
-      <NavbarLink>Projects</NavbarLink>
-      <NavbarLink>Skills</NavbarLink>
-      <NavbarLink>Contact</NavbarLink>
+      <NavbarLink active>{t('navbar.home')}</NavbarLink>
+      <NavbarLink>{t('navbar.projects')}</NavbarLink>
+      <NavbarLink>{t('navbar.skills')}</NavbarLink>
+      <NavbarLink>{t('navbar.contact')}</NavbarLink>
     </>
   );
 }
