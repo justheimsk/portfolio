@@ -17,22 +17,22 @@ const App = () => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    const canvas = document.getElementById("stars") as HTMLCanvasElement;
-
-    if(canvas) {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
 
       try {
-        const offscreen = canvas.transferControlToOffscreen();
-        const worker = new Worker(new URL('./shared/worker.ts', import.meta.url), { type: 'module' });
-        worker.postMessage({ event: "init", canvas: offscreen, width: window.innerWidth, height: window.innerHeight }, [offscreen]);
+        const canvas = document.getElementById("stars") as HTMLCanvasElement;
 
-        window.addEventListener('resize', () => {
-          worker.postMessage({ event: "resize", width: window.innerWidth, height: window.innerHeight });
-        })
+        if(canvas) {
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerHeight;
+          const offscreen = canvas.transferControlToOffscreen();
+          const worker = new Worker(new URL('./shared/worker.ts', import.meta.url), { type: 'module' });
+          worker.postMessage({ event: "init", canvas: offscreen, width: window.innerWidth, height: window.innerHeight }, [offscreen]);
+
+          window.addEventListener('resize', () => {
+            worker.postMessage({ event: "resize", width: window.innerWidth, height: window.innerHeight });
+          })
+        }
       } catch(_){}
-    }
 
     try {
       const effects = [new CustomCursor()];
@@ -65,7 +65,7 @@ const App = () => {
           <h2 className="text-5xl font-bold">{t('title')}</h2>
           <p className="max-w-[500px] text-sm text-gray-300">{t('subtitle')}</p>
           <div className="flex items-center gap-4">
-            <Button bStyle="outline">{t("buttons.projects")}</Button>
+            <Button bstyle="outline">{t("buttons.projects")}</Button>
             <Button>{t("buttons.resume")} <FaDownload /></Button>
           </div>
         </div>
