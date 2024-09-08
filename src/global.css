@@ -3,13 +3,12 @@
 @tailwind utilities;
 
 * {
-  z-index: 2;
   cursor: none !important;
 }
 
 body {
   @apply bg-slate-950;
-  z-index: 1;
+  overflow-x: hidden;
 }
 
 .nav-icon {
@@ -20,11 +19,19 @@ body {
   @apply bg-blue-800;
 }
 
+.text-primary {
+  @apply text-blue-800;
+}
+
+.ignore-nav {
+  height: calc(100vh - 32px);
+}
+
 #stars {
   position: absolute;
   top: 32px;
   left: 0;
-  z-index: 1;
+  z-index: -1;
   pointer-events: none;
 }
 
