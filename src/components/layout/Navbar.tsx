@@ -43,7 +43,7 @@ export function Navbar() {
               <FaGithub className="nav-icon" />
             </a>
             <FaDiscord className="nav-icon text-[#5865F2]" />
-            <Button>Baixar curriculo</Button>
+            <Button>Download resume</Button>
           </div>
         </div>
       </Container>
