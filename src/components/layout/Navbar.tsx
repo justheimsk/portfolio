@@ -76,7 +76,6 @@ export function NavbarMenu() {
 export function NavbarLink(props: NavbarLinkProps) {
   return (
     <a
-      {...props}
       href='/'
       className={`py-0.5 px-3 rounded-full cursor-pointer transition ${props.active ? 'bg-white text-black' : 'hover:bg-white/10 text-white'} ${props.className}`}
     >
