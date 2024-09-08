@@ -5,6 +5,7 @@ import { RxHamburgerMenu } from 'react-icons/rx';
 import { FaTimes } from 'react-icons/fa';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { IoLanguage } from 'react-icons/io5';
 
 export function Navbar() {
   const [active, setActive] = useState(false);
@@ -36,6 +37,7 @@ export function Navbar() {
         <div className="w-full flex items-center justify-between h-10 text-white">
           <span className="font-semibold text-lg">Vonderheimsk</span>
           <div className="flex gap-4 items-center">
+            <IoLanguage className="nav-icon" />
             <a
               href="https://github.com/justheimsk"
               target="_blank"
