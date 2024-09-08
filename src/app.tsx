@@ -7,7 +7,7 @@ import { Color } from 'three';
 import { Container } from './components/common/Container';
 import { Section } from './components/layout/Section';
 import { Button } from './components/common/Button';
-import { FaDocker, FaLinux, FaNodeJs, FaReact } from 'react-icons/fa6';
+import { FaDocker, FaDownload, FaLinux, FaNodeJs, FaReact } from 'react-icons/fa6';
 import { RiNextjsFill } from 'react-icons/ri';
 import { TbBrandCpp } from 'react-icons/tb';
 import { BiLogoPostgresql, BiLogoTypescript } from 'react-icons/bi';
@@ -15,11 +15,15 @@ import { SiTailwindcss } from 'react-icons/si';
 
 const App = () => {
   useEffect(() => {
+    try {
     const effects = [new Stars({ elId: "stars", maxHeight: 800, rendererOptions: { alpha: true, antialias: true, precision: 'lowp' }, clearColor: new Color(0xffffff) }), new CustomCursor()];
     
     //const effects = [new CustomCursor()];
     for(const effect of effects) {
       effect.init();
+    }
+    } catch(err) {
+      console.log("Could not initialize effects: ", err);
     }
   }, []);
 
@@ -44,7 +48,7 @@ const App = () => {
           <h2 className="text-5xl font-bold">A non-standard <span className="text-blue-600">Fullstack</span> developer</h2>
           <p className="max-w-[500px] text-sm text-gray-300">Hello! I’m a fullstack developer passionate about creating innovative and efficient solutions. With expertise in various technologies, I’m always looking for new challenges and opportunities to turn ideas into reality.</p>
           <div className="flex items-center gap-4">
-            <Button>Explore my projects</Button>
+            <Button bStyle="outline">Explore my projects</Button>
             <Button>Download resume</Button>
           </div>
         </div>

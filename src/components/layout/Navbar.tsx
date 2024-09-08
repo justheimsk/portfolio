@@ -18,7 +18,7 @@ export function Navbar() {
           <div className="flex md:hidden items-center h-full text-white justify-between px-4">
             <span className="font-semibold">Vonderheimsk</span>
             <div className="flex items-center gap-2">
-              <Button className="font-semibold text-[12px] px-2 py-0.5">
+              <Button rounded="rounded-full" className="font-semibold text-[12px] px-2 py-0.5">
                 Baixar curriculo
               </Button>
               <RxHamburgerMenu onClick={() => setActive(!active)} className="cursor-pointer text-xl" />
@@ -43,7 +43,7 @@ export function Navbar() {
               <FaGithub className="nav-icon" />
             </a>
             <FaDiscord className="nav-icon text-[#5865F2]" />
-            <Button>Download resume</Button>
+            <Button rounded="rounded-full">Download resume</Button>
           </div>
         </div>
       </Container>
