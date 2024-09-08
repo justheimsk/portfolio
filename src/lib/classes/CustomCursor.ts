@@ -80,9 +80,9 @@ export class CustomCursor implements Effect {
     //this.ctx.beginPath();
     //this.ctx.font = '50px Arial';
     //this.ctx.fillText(
-    //  `FPS: ${this.avgFps}`,
-    //  window.innerWidth / 2,
-    //  window.innerHeight / 2,
+    // `FPS: ${this.avgFps}`,
+    // window.innerWidth / 2,
+    // window.innerHeight / 2,
     //);
     //this.ctx.closePath();
 
