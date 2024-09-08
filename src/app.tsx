@@ -2,8 +2,7 @@ import { useEffect } from 'react';
 import { Navbar } from './components/layout/Navbar';
 import { UpperNavbar } from './components/layout/UpperNavbar';
 import './global.css';
-import { CustomCursor, Stars } from './lib';
-import { Color } from 'three';
+import { CustomCursor } from './lib';
 import { Container } from './components/common/Container';
 import { Section } from './components/layout/Section';
 import { Button } from './components/common/Button';
@@ -18,13 +17,28 @@ const App = () => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    try {
-    const effects = [new Stars({ elId: "stars", maxHeight: 800, rendererOptions: { alpha: true, antialias: true, precision: 'lowp' }, clearColor: new Color(0xffffff) }), new CustomCursor()];
-    
-    //const effects = [new CustomCursor()];
-    for(const effect of effects) {
-      effect.init();
+    const canvas = document.getElementById("stars") as HTMLCanvasElement;
+
+    if(canvas) {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      try {
+        const offscreen = canvas.transferControlToOffscreen();
+        const worker = new Worker(new URL('./shared/worker.ts', import.meta.url), { type: 'module' });
+        worker.postMessage({ event: "init", canvas: offscreen, width: window.innerWidth, height: window.innerHeight }, [offscreen]);
+
+        window.addEventListener('resize', () => {
+          worker.postMessage({ event: "resize", width: window.innerWidth, height: window.innerHeight });
+        })
+      } catch(_){}
     }
+
+    try {
+      const effects = [new CustomCursor()];
+      for(const effect of effects) {
+        effect.init();
+      }
     } catch(err) {
       console.log("Could not initialize effects: ", err);
     }

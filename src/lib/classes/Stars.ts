@@ -6,33 +6,35 @@ export interface StarsOptions {
   rendererOptions?: WebGLRendererParameters;
   clearColor?: Color;
   maxHeight?: number;
+  height?: number;
+  width?: number;
 }
 
 export class Stars implements Effect {
-  private renderer: WebGLRenderer;
+  public renderer?: WebGLRenderer;
   public scene: Scene;
   public camera: PerspectiveCamera;
   private radius = 10;
   private angle = 0;
   public options: StarsOptions;
+  public rendering = false;
 
   public constructor(options?: StarsOptions) {
     this.options = options || {};
-    this.renderer = new WebGLRenderer(options?.rendererOptions);
     this.scene = new Scene();
-    this.camera = new PerspectiveCamera(75, window.innerWidth / this.height, 2, 1000);
+    this.camera = new PerspectiveCamera(75, this.width / this.height, 0.1, 1000);
 
-    if(options) {
-      if(options.elId) this.renderer.domElement.id = options.elId;
-      if(options.clearColor) this.renderer.setClearColor(options.clearColor, 0);
-    }
 
     this.render = this.render.bind(this);
     this.resize = this.resize.bind(this);
   }
 
   private get height() {
-    return this.options.maxHeight && window.innerHeight > this.options.maxHeight ? this.options.maxHeight : window.innerHeight;
+    return this.options.maxHeight && (this.options.height ?? window.innerHeight) > this.options.maxHeight ? this.options.maxHeight : (this.options.height ?? window.innerHeight);
+  }
+
+  private get width() {
+    return this.options.width ?? window.innerWidth;
   }
 
   private random() {
@@ -55,27 +57,38 @@ export class Stars implements Effect {
   }
 
   public resize() {
-    this.renderer.setSize(window.innerWidth, this.height - 32);
-    this.camera.aspect = window.innerWidth / this.height;
+    this.renderer?.setSize(this.width, this.height - 32, false);
+    this.camera.aspect = this.width / this.height;
     this.camera.updateProjectionMatrix();
     this.camera.position.set(this.radius, 5, 10);
   }
 
-  private attachEvents() {
+  public attachEvents() {
     window.addEventListener('resize', this.resize);
   }
 
-  public init() {
-    this.attachEvents();
-    this.resize();
+  public init(canvas?: HTMLCanvasElement) {
+    this.scene.clear();
+
+    if(canvas) this.options.rendererOptions = { canvas, ...this.options.rendererOptions };
+    this.renderer = new WebGLRenderer(this.options?.rendererOptions);
+    
+    if(this.options) {
+      if(this.options.elId) this.renderer.domElement.id = this.options.elId;
+      if(this.options.clearColor) this.renderer.setClearColor(this.options.clearColor, 0);
+    }
 
     const stars = this.generateStars(1500);
     for(const star of stars) {
       this.scene.add(star)
     }
 
-    document.body.appendChild(this.renderer.domElement);
-    this.render();
+    if(!this.options.rendererOptions?.canvas) document.body.appendChild(this.renderer.domElement);
+    
+    if(!this.rendering) {
+      this.render();
+      this.rendering = true;
+    }
   }
 
   private render() {
@@ -85,7 +98,7 @@ export class Stars implements Effect {
     this.camera.position.y = this.radius * Math.sin(this.angle);
     this.camera.lookAt(0, 5, 0);
 
-    this.renderer.render(this.scene, this.camera);
+    this.renderer?.render(this.scene, this.camera);
 
     setTimeout(() => requestAnimationFrame(this.render), 1000 / 60);
   }
