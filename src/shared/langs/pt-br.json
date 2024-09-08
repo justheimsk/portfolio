@@ -1,0 +1,17 @@
+{
+  "translation": {
+    "title": "Um desenvolvedor Fullstack inovador",
+    "subtitle": "Olá! Sou um desenvolvedor Fullstack apaixonado por criar soluções inovadoras e eficientes. Com experiência em várias tecnologias, estou sempre em busca de novos desafios e oportunidades para transformar ideias em realidade.",
+    "buttons": {
+      "projects": "Explore meus projetos",
+      "resume": "Baixar curriculo"
+    },
+    "navbar": {
+      "home": "Home",
+      "projects": "Projetos",
+      "skills": "Skills",
+      "contact": "Contato"
+    },
+    "uppernavbar": "Disponível para Contratação"
+  }
+}

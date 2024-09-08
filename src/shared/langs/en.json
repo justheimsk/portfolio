@@ -1,0 +1,17 @@
+{
+  "translation": {
+    "title": "A non-standard Fullstack developer",
+    "subtitle": "Hello! I’m a fullstack developer passionate about creating innovative and efficient solutions. With expertise in various technologies, I’m always looking for new challenges and opportunities to turn ideas into reality.",
+    "buttons": {
+      "projects": "Explore my projects",
+      "resume": "Download resume"
+    },
+    "navbar": {
+      "home": "Home",
+      "projects": "Projects",
+      "skills": "Skills",
+      "contact": "Contact"
+    },
+    "uppernavbar": "Available for Hire"
+  }
+}
