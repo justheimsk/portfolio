@@ -17,7 +17,6 @@ const App = () => {
   const { t } = useTranslation();
 
   useEffect(() => {
-
       try {
         const canvas = document.getElementById("stars") as HTMLCanvasElement;
 
