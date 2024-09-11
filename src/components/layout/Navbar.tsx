@@ -6,10 +6,12 @@ import { FaTimes } from 'react-icons/fa';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { IoLanguage } from 'react-icons/io5';
+import * as Dropdown from '../common/Dropdown';
+import langs from "../../shared/langs";
 
 export function Navbar() {
   const [active, setActive] = useState(false);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <>
@@ -37,7 +39,14 @@ export function Navbar() {
         <div className="w-full flex items-center justify-between h-10 text-white">
           <span className="font-semibold text-lg">Vonderheimsk</span>
           <div className="flex gap-4 items-center">
-            <IoLanguage className="nav-icon" />
+            <Dropdown.Menu>
+              <IoLanguage className="nav-icon" />
+              <Dropdown.Content>
+                {Object.values(langs).map((lang, i) => (
+                  <Dropdown.Item onClick={() => i18n.changeLanguage(lang.meta.code)} key={i}>{lang.meta.name}</Dropdown.Item>
+                ))}
+              </Dropdown.Content>
+            </Dropdown.Menu>
             <a
               href="https://github.com/justheimsk"
               target="_blank"
