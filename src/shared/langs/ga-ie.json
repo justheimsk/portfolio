@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "name": "Gaeilge",
+    "code": "ga-IE"
+  },
+  "translation": {
+    "title": "Forbróir Fullstack nuálach",
+    "subtitle": "Dia duit! Is forbróir Fullstack mé atá paiseanta faoi chruthú réitigh nuálacha agus éifeachtacha. Le taithí i dteicneolaíochtaí éagsúla, táim i gcónaí ag lorg dúshlán nua.",
+    "buttons": {
+      "projects": "Féach ar mo thionscadail",
+      "resume": "Íoslódáil CV"
+    },
+    "navbar": {
+      "home": "Baile",
+      "projects": "Tionscadail",
+      "skills": "Scileanna",
+      "contact": "Teagmháil"
+    },
+    "uppernavbar": "Ar fáil le haghaidh fostaithe"
+  }
+}

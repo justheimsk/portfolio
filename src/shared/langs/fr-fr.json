@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "name": "Français",
+    "code": "fr-FR"
+  },
+  "translation": {
+    "title": "Un développeur Fullstack innovant",
+    "subtitle": "Bonjour ! Je suis un développeur Fullstack passionné par la création de solutions innovantes et efficaces. Avec une expérience dans diverses technologies, je suis toujours à la recherche de nouveaux défis.",
+    "buttons": {
+      "projects": "Explorez mes projets",
+      "resume": "Télécharger le CV"
+    },
+    "navbar": {
+      "home": "Accueil",
+      "projects": "Projets",
+      "skills": "Compétences",
+      "contact": "Contact"
+    },
+    "uppernavbar": "Disponible pour recrutement"
+  }
+}
+

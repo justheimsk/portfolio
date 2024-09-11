@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "name": "Italiano",
+    "code": "it-IT"
+  },
+  "translation": {
+    "title": "Un sviluppatore Fullstack innovativo",
+    "subtitle": "Ciao! Sono uno sviluppatore Fullstack appassionato di creare soluzioni innovative ed efficienti. Con esperienza in diverse tecnologie, sono sempre alla ricerca di nuove sfide.",
+    "buttons": {
+      "projects": "Esplora i miei progetti",
+      "resume": "Scarica il curriculum"
+    },
+    "navbar": {
+      "home": "Home",
+      "projects": "Progetti",
+      "skills": "Competenze",
+      "contact": "Contatto"
+    },
+    "uppernavbar": "Disponibile per assunzione"
+  }
+}

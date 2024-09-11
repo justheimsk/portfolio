@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "name": "Deutsch",
+    "code": "de-DE"
+  },
+  "translation": {
+    "title": "Ein innovativer Fullstack-Entwickler",
+    "subtitle": "Hallo! Ich bin ein Fullstack-Entwickler, der leidenschaftlich gerne innovative und effiziente Lösungen erstellt. Mit Erfahrung in verschiedenen Technologien bin ich stets auf der Suche nach neuen Herausforderungen.",
+    "buttons": {
+      "projects": "Meine Projekte erkunden",
+      "resume": "Lebenslauf herunterladen"
+    },
+    "navbar": {
+      "home": "Startseite",
+      "projects": "Projekte",
+      "skills": "Fähigkeiten",
+      "contact": "Kontakt"
+    },
+    "uppernavbar": "Verfügbar für Anstellung"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "name": "Svenska",
+    "code": "sv-SE"
+  },
+  "translation": {
+    "title": "En innovativ Fullstack-utvecklare",
+    "subtitle": "Hej! Jag är en Fullstack-utvecklare som brinner för att skapa innovativa och effektiva lösningar. Med erfarenhet inom olika teknologier är jag alltid på jakt efter nya utmaningar.",
+    "buttons": {
+      "projects": "Utforska mina projekt",
+      "resume": "Ladda ner CV"
+    },
+    "navbar": {
+      "home": "Hem",
+      "projects": "Projekt",
+      "skills": "Färdigheter",
+      "contact": "Kontakt"
+    },
+    "uppernavbar": "Tillgänglig för anställning"
+  }
+}

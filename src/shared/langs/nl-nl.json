@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "name": "Nederlands",
+    "code": "nl-NL"
+  },
+  "translation": {
+    "title": "Een innovatieve Fullstack-ontwikkelaar",
+    "subtitle": "Hallo! Ik ben een Fullstack-ontwikkelaar die gepassioneerd is over het creëren van innovatieve en efficiënte oplossingen. Met ervaring in verschillende technologieën ben ik altijd op zoek naar nieuwe uitdagingen.",
+    "buttons": {
+      "projects": "Bekijk mijn projecten",
+      "resume": "Download cv"
+    },
+    "navbar": {
+      "home": "Home",
+      "projects": "Projecten",
+      "skills": "Vaardigheden",
+      "contact": "Contact"
+    },
+    "uppernavbar": "Beschikbaar voor werk"
+  }
+}

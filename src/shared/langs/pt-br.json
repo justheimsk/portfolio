@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "name": "Português",
+    "code": "pt-BR"
+  },
   "translation": {
     "title": "Um desenvolvedor Fullstack inovador",
     "subtitle": "Olá! Sou um desenvolvedor Fullstack apaixonado por criar soluções inovadoras e eficientes. Com experiência em várias tecnologias, estou sempre em busca de novos desafios e oportunidades para transformar ideias em realidade.",

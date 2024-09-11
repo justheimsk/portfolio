@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "name": "English",
+    "code": "en-US"
+  },
   "translation": {
     "title": "A non-standard Fullstack developer",
     "subtitle": "Hello! I’m a fullstack developer passionate about creating innovative and efficient solutions. With expertise in various technologies, I’m always looking for new challenges and opportunities to turn ideas into reality.",
