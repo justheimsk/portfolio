@@ -17,6 +17,7 @@ export class CustomCursor implements Effect {
   private delta = 0;
   private fpsArray: number[] = [];
   private counter = 0;
+  private pressing = false;
 
   public constructor() {
     this.canvas = document.createElement('canvas');
@@ -36,6 +37,9 @@ export class CustomCursor implements Effect {
 
   private attachEvents() {
     window.addEventListener('resize', this.resize);
+    window.addEventListener('mousedown', () => { this.pressing = true });
+    window.addEventListener('mouseup', () => { this.pressing = false });
+
     window.addEventListener('mousemove', (e) => {
       const hover = [
         'BUTTON',
@@ -100,13 +104,13 @@ export class CustomCursor implements Effect {
     this.ctx.closePath();
 
     if(this.hovering) {
-      if(this.hoverOffset < 2) {
-        this.hoverOffset += 0.2;
-      }
+      if(this.pressing && this.hoverOffset > 1.5) this.hoverOffset -= 0.1;
+      if(this.pressing && this.hoverOffset < 1.5) this.hoverOffset += 0.1;
+      if(!this.pressing && this.hoverOffset < 2) this.hoverOffset += 0.2;
     } else {
-      if(this.hoverOffset > 1) {
-        this.hoverOffset -= 0.2;
-      }
+      if(this.pressing && this.hoverOffset > 1.5) this.hoverOffset -= 0.1;
+      if(this.pressing && this.hoverOffset < 1.5) this.hoverOffset += 0.1;
+      if(!this.pressing && this.hoverOffset > 1) this.hoverOffset -= 0.2;
     }
 
     this.delta = (Date.now() - this.lastCalledTime) / 1000;
