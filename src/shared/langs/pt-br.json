@@ -4,18 +4,40 @@
     "code": "pt-BR"
   },
   "translation": {
-    "title": "Um desenvolvedor Fullstack inovador",
-    "subtitle": "Olá! Sou um desenvolvedor Fullstack apaixonado por criar soluções inovadoras e eficientes. Com experiência em várias tecnologias, estou sempre em busca de novos desafios e oportunidades para transformar ideias em realidade.",
+    "title": "Desenvolvedor Fullstack Inovador",
+    "subtitle": "Olá! Sou um desenvolvedor Fullstack com paixão por criar soluções inovadoras e eficientes. Com experiência em diversas tecnologias, estou constantemente em busca de novos desafios e oportunidades para transformar ideias em realidade.",
     "buttons": {
       "projects": "Explore meus projetos",
-      "resume": "Baixar curriculo"
+      "resume": "Baixar currículo"
     },
     "navbar": {
-      "home": "Home",
+      "home": "Início",
       "projects": "Projetos",
-      "skills": "Skills",
+      "skills": "Habilidades",
       "contact": "Contato"
     },
-    "uppernavbar": "Disponível para Contratação"
+    "uppernavbar": "Disponível para Contratação",
+    "projects": {
+      "title": "Principais Projetos",
+      "subtitle": "Projetos pessoais desenvolvidos de forma profissional, seguindo boas práticas e com código limpo.",
+      "uptitle": "OS MELHORES",
+      "list": {
+        "cordiumjs": {
+          "description": "Uma biblioteca escrita em TypeScript para comunicação com os servidores do Discord, criada com foco em desempenho. Esta biblioteca suporta Multicore (vários núcleos de CPU)."
+        },
+        "restman": {
+          "description": "Um projeto que recria o site Postman para fins educacionais. Este site busca implementar a principal função do Postman."
+        },
+        "dentist": {
+          "title": "Sites para Dentistas",
+          "description": "Um site simples que simula uma página de captura para uma clínica odontológica, criado utilizando NextJS, TailwindCSS e Shadcn/UI."
+        },
+        "all": {
+          "stack": "10 Projetos",
+          "title": "Veja todos os projetos no GitHub!"
+        }
+      }
+    }
   }
 }
+

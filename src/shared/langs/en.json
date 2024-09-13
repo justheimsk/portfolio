@@ -5,7 +5,7 @@
   },
   "translation": {
     "title": "A non-standard Fullstack developer",
-    "subtitle": "Hello! I’m a fullstack developer passionate about creating innovative and efficient solutions. With expertise in various technologies, I’m always looking for new challenges and opportunities to turn ideas into reality.",
+    "subtitle": "Hello! I am a Fullstack developer passionate about creating innovative and efficient solutions. With experience in various technologies, I am constantly seeking new challenges and opportunities to turn ideas into reality.",
     "buttons": {
       "projects": "Explore my projects",
       "resume": "Download resume"
@@ -16,6 +16,28 @@
       "skills": "Skills",
       "contact": "Contact"
     },
-    "uppernavbar": "Available for Hire"
+    "uppernavbar": "Available for Hire",
+    "projects": {
+      "title": "Key Projects",
+      "subtitle": "Personal projects developed professionally, following best practices and with clean code.",
+      "uptitle": "THE BEST",
+      "list": {
+        "cordiumjs": {
+          "description": "A library written in TypeScript for communicating with Discord servers, created with a focus on performance. This library supports Multicore (multiple CPU cores)."
+        },
+        "restman": {
+          "description": "A project that recreates the Postman website for educational purposes. This site aims to implement the main functionality of Postman."
+        },
+        "dentist": {
+          "title": "Sites for Dentists",
+          "description": "A simple site simulating a landing page for a dental clinic, created using NextJS, TailwindCSS, and Shadcn/UI."
+        },
+        "all": {
+          "stack": "10 Projects",
+          "title": "See all projects on GitHub!"
+        }
+      }
+    }
   }
 }
+

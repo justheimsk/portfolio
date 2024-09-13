@@ -4,10 +4,10 @@
     "code": "de-DE"
   },
   "translation": {
-    "title": "Ein innovativer Fullstack-Entwickler",
-    "subtitle": "Hallo! Ich bin ein Fullstack-Entwickler, der leidenschaftlich gerne innovative und effiziente Lösungen erstellt. Mit Erfahrung in verschiedenen Technologien bin ich stets auf der Suche nach neuen Herausforderungen.",
+    "title": "Innovativer Fullstack-Entwickler",
+    "subtitle": "Hallo! Ich bin ein Fullstack-Entwickler, der leidenschaftlich daran interessiert ist, innovative und effiziente Lösungen zu schaffen. Mit Erfahrung in verschiedenen Technologien bin ich ständig auf der Suche nach neuen Herausforderungen und Möglichkeiten, Ideen in die Realität umzusetzen.",
     "buttons": {
-      "projects": "Meine Projekte erkunden",
+      "projects": "Entdecken Sie meine Projekte",
       "resume": "Lebenslauf herunterladen"
     },
     "navbar": {
@@ -16,6 +16,28 @@
       "skills": "Fähigkeiten",
       "contact": "Kontakt"
     },
-    "uppernavbar": "Verfügbar für Anstellung"
+    "uppernavbar": "Verfügbar für Anstellungen",
+    "projects": {
+      "title": "Wichtige Projekte",
+      "subtitle": "Persönliche Projekte, die professionell entwickelt wurden, mit bewährten Methoden und sauberem Code.",
+      "uptitle": "DIE BESTEN",
+      "list": {
+        "cordiumjs": {
+          "description": "Eine in TypeScript geschriebene Bibliothek zur Kommunikation mit Discord-Servern, die mit Fokus auf Leistung erstellt wurde. Diese Bibliothek unterstützt Multicore (mehrere CPU-Kerne)."
+        },
+        "restman": {
+          "description": "Ein Projekt, das die Postman-Website zu Bildungszwecken neu erstellt. Diese Website zielt darauf ab, die Hauptfunktionalität von Postman umzusetzen."
+        },
+        "dentist": {
+          "title": "Websites für Zahnärzte",
+          "description": "Eine einfache Website, die eine Landingpage für eine Zahnarztpraxis simuliert, erstellt mit NextJS, TailwindCSS und Shadcn/UI."
+        },
+        "all": {
+          "stack": "10 Projekte",
+          "title": "Sehen Sie alle Projekte auf GitHub!"
+        }
+      }
+    }
   }
 }
+

@@ -4,8 +4,8 @@
     "code": "fr-FR"
   },
   "translation": {
-    "title": "Un développeur Fullstack innovant",
-    "subtitle": "Bonjour ! Je suis un développeur Fullstack passionné par la création de solutions innovantes et efficaces. Avec une expérience dans diverses technologies, je suis toujours à la recherche de nouveaux défis.",
+    "title": "Développeur Fullstack Innovant",
+    "subtitle": "Bonjour ! Je suis un développeur Fullstack passionné par la création de solutions innovantes et efficaces. Fort d'une expérience dans diverses technologies, je suis constamment à la recherche de nouveaux défis et opportunités pour transformer les idées en réalité.",
     "buttons": {
       "projects": "Explorez mes projets",
       "resume": "Télécharger le CV"
@@ -16,7 +16,28 @@
       "skills": "Compétences",
       "contact": "Contact"
     },
-    "uppernavbar": "Disponible pour recrutement"
+    "uppernavbar": "Disponible pour embauche",
+    "projects": {
+      "title": "Projets Clés",
+      "subtitle": "Projets personnels développés de manière professionnelle, suivant les meilleures pratiques et avec un code propre.",
+      "uptitle": "LES MEILLEURS",
+      "list": {
+        "cordiumjs": {
+          "description": "Une bibliothèque écrite en TypeScript pour communiquer avec les serveurs Discord, créée avec un accent sur la performance. Cette bibliothèque supporte le Multicore (plusieurs cœurs de CPU)."
+        },
+        "restman": {
+          "description": "Un projet qui recrée le site Postman à des fins éducatives. Ce site vise à implémenter la fonction principale de Postman."
+        },
+        "dentist": {
+          "title": "Sites pour Dentistes",
+          "description": "Un site simple simulant une page de destination pour une clinique dentaire, créé avec NextJS, TailwindCSS et Shadcn/UI."
+        },
+        "all": {
+          "stack": "10 Projets",
+          "title": "Découvrez tous les projets sur GitHub !"
+        }
+      }
+    }
   }
 }
 

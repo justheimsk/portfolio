@@ -4,18 +4,40 @@
     "code": "nl-NL"
   },
   "translation": {
-    "title": "Een innovatieve Fullstack-ontwikkelaar",
-    "subtitle": "Hallo! Ik ben een Fullstack-ontwikkelaar die gepassioneerd is over het creëren van innovatieve en efficiënte oplossingen. Met ervaring in verschillende technologieën ben ik altijd op zoek naar nieuwe uitdagingen.",
+    "title": "Innovatieve Fullstack Ontwikkelaar",
+    "subtitle": "Hallo! Ik ben een Fullstack ontwikkelaar met een passie voor het creëren van innovatieve en efficiënte oplossingen. Met ervaring in verschillende technologieën ben ik voortdurend op zoek naar nieuwe uitdagingen en kansen om ideeën in de praktijk te brengen.",
     "buttons": {
       "projects": "Bekijk mijn projecten",
-      "resume": "Download cv"
+      "resume": "Download CV"
     },
     "navbar": {
-      "home": "Home",
+      "home": "Start",
       "projects": "Projecten",
       "skills": "Vaardigheden",
       "contact": "Contact"
     },
-    "uppernavbar": "Beschikbaar voor werk"
+    "uppernavbar": "Beschikbaar voor Aanwerving",
+    "projects": {
+      "title": "Belangrijke Projecten",
+      "subtitle": "Persoonlijke projecten die professioneel zijn ontwikkeld, volgens best practices en met schone code.",
+      "uptitle": "DE BESTEN",
+      "list": {
+        "cordiumjs": {
+          "description": "Een bibliotheek geschreven in TypeScript voor communicatie met Discord-servers, ontworpen met een focus op prestaties. Deze bibliotheek ondersteunt Multicore (meerdere CPU-kernen)."
+        },
+        "restman": {
+          "description": "Een project dat de Postman-website opnieuw creëert voor educatieve doeleinden. Deze site is bedoeld om de belangrijkste functionaliteit van Postman te implementeren."
+        },
+        "dentist": {
+          "title": "Websites voor Tandartsen",
+          "description": "Een eenvoudige website die een landingspagina voor een tandartspraktijk simuleert, gemaakt met NextJS, TailwindCSS en Shadcn/UI."
+        },
+        "all": {
+          "stack": "10 Projecten",
+          "title": "Bekijk alle projecten op GitHub!"
+        }
+      }
+    }
   }
 }
+

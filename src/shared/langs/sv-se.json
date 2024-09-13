@@ -4,8 +4,8 @@
     "code": "sv-SE"
   },
   "translation": {
-    "title": "En innovativ Fullstack-utvecklare",
-    "subtitle": "Hej! Jag är en Fullstack-utvecklare som brinner för att skapa innovativa och effektiva lösningar. Med erfarenhet inom olika teknologier är jag alltid på jakt efter nya utmaningar.",
+    "title": "Innovativ Fullstack-utvecklare",
+    "subtitle": "Hej! Jag är en Fullstack-utvecklare som brinner för att skapa innovativa och effektiva lösningar. Med erfarenhet av olika teknologier är jag ständigt på jakt efter nya utmaningar och möjligheter att förverkliga idéer.",
     "buttons": {
       "projects": "Utforska mina projekt",
       "resume": "Ladda ner CV"
@@ -16,6 +16,28 @@
       "skills": "Färdigheter",
       "contact": "Kontakt"
     },
-    "uppernavbar": "Tillgänglig för anställning"
+    "uppernavbar": "Tillgänglig för Anställning",
+    "projects": {
+      "title": "Huvudprojekt",
+      "subtitle": "Personliga projekt som har utvecklats professionellt, med goda praxis och ren kod.",
+      "uptitle": "DE BÄSTA",
+      "list": {
+        "cordiumjs": {
+          "description": "Ett bibliotek skrivet i TypeScript för kommunikation med Discord-servrar, skapat med fokus på prestanda. Detta bibliotek stödjer Multicore (flera CPU-kärnor)."
+        },
+        "restman": {
+          "description": "Ett projekt som återskapar Postman-webbplatsen för utbildningsändamål. Denna webbplats syftar till att implementera Postmans huvudsakliga funktionalitet."
+        },
+        "dentist": {
+          "title": "Webbplatser för Tandläkare",
+          "description": "En enkel webbplats som simulerar en landningssida för en tandläkarklinik, skapad med NextJS, TailwindCSS och Shadcn/UI."
+        },
+        "all": {
+          "stack": "10 Projekt",
+          "title": "Se alla projekt på GitHub!"
+        }
+      }
+    }
   }
 }
+
