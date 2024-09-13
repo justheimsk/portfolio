@@ -67,6 +67,7 @@ export function Navbar() {
 export interface NavbarLinkProps
   extends React.HTMLAttributes<HTMLAnchorElement> {
   active?: boolean;
+  nhref?: string;
 }
 
 export function NavbarMenu() {
@@ -74,8 +75,8 @@ export function NavbarMenu() {
 
   return (
     <>
-      <NavbarLink active>{t('navbar.home')}</NavbarLink>
-      <NavbarLink>{t('navbar.projects')}</NavbarLink>
+      <NavbarLink nhref="home" active>{t('navbar.home')}</NavbarLink>
+      <NavbarLink nhref="projects">{t('navbar.projects')}</NavbarLink>
       <NavbarLink>{t('navbar.skills')}</NavbarLink>
       <NavbarLink>{t('navbar.contact')}</NavbarLink>
     </>
@@ -83,12 +84,20 @@ export function NavbarMenu() {
 }
 
 export function NavbarLink(props: NavbarLinkProps) {
+  function scrollTo() {
+    if(props.nhref) {
+      const element = document.getElementById(props.nhref);
+      element?.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
   return (
-    <a
-      href='/'
-      className={`py-0.5 px-3 rounded-full cursor-pointer transition ${props.active ? 'bg-white text-black' : 'hover:bg-white/10 text-white'} ${props.className}`}
+    <button
+      type="button"
+      onClick={() => scrollTo()}
+      className={`py-0.5 px-3 outline-none rounded-full cursor-pointer transition ${props.active ? 'bg-white text-black' : 'hover:bg-white/10 text-white'} ${props.className}`}
     >
       {props.children}
-    </a>
+    </button>
   );
 }
