@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  cursor: none !important;
-}
-
 body {
   @apply bg-slate-950;
   overflow-x: hidden;
@@ -21,6 +17,14 @@ body {
 
 .text-primary {
   @apply text-blue-800;
+}
+
+.bg-secondary {
+  background-color: dodgerblue;
+}
+
+.text-secondary {
+  background-color: dodgerblue;
 }
 
 .ignore-nav {

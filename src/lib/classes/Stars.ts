@@ -22,7 +22,7 @@ export class Stars implements Effect {
   public constructor(options?: StarsOptions) {
     this.options = options || {};
     this.scene = new Scene();
-    this.camera = new PerspectiveCamera(75, this.width / this.height, 0.1, 1000);
+    this.camera = new PerspectiveCamera(75, this.width / this.height, 3, 1000);
 
 
     this.render = this.render.bind(this);

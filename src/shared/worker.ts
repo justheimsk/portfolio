@@ -6,7 +6,7 @@ const stars = new Stars({
   height: 0,
   maxHeight: 800,
   rendererOptions: { antialias: true, alpha: true },
-  clearColor: new Color(0xffffff)
+  clearColor: new Color(0xffffff),
 });
 
 self.onmessage = (e) => {
@@ -14,8 +14,12 @@ self.onmessage = (e) => {
     stars.options.width = e.data.width;
     stars.options.height = e.data.height;
 
-    stars.init(e.data.canvas);
-    stars.resize();
+    try {
+      stars.init(e.data.canvas);
+      stars.resize();
+    } catch(err) {
+      console.log("cu", err);
+    }
   } else if(e.data.event === "resize") {
     stars.options.width = e.data.width;
     stars.options.height = e.data.height;

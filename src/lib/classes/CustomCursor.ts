@@ -73,11 +73,19 @@ export class CustomCursor implements Effect {
     this.resize();
 
     document.body.appendChild(this.canvas);
+    const style = document.createElement('style');
+    style.textContent = `
+      * {
+        cursor: none! important
+      }
+    `
 
+    document.body.append(style);
     this.render();
   }
 
   public render() {
+    if(window.innerWidth < 768) return;
     this.ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
     let fps = 0;
 
