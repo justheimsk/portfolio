@@ -29,7 +29,7 @@ export function WordsComponent() {
 
 export function Tape() {
   return (
-    <div className="w-svw max-w-[100vw] mr-6 text-white font-bold h-12 gradient-secondary -rotate-3">
+    <div className="w-[100vw] max-w-[100vw] overflow-x-hidden text-white font-bold h-12 gradient-secondary -rotate-3">
       <div className="flex w-svw h-full [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
         <div className="infinite-loop w-svw flex items-center gap-6 h-full">
           <WordsComponent />

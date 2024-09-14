@@ -101,7 +101,7 @@ const App = () => {
         </Section>
       </Container>
       <Tape />
-      <Container className="mt-8">
+      <Container className="mt-16">
         <Section id="projects" className="text-white">
           <div className="text-center flex flex-col gap-2 max-w-[500px] mx-auto">
             <span className="text-md text-secondary tracking-widest">
