@@ -20,6 +20,7 @@ import { BiLogoPostgresql, BiLogoTypescript } from 'react-icons/bi';
 import { SiTailwindcss } from 'react-icons/si';
 import { useTranslation } from 'react-i18next';
 import { ProjectCard } from './components/common/ProjectCard';
+import { Tape } from './components/common/Tape';
 
 const App = () => {
   const { t } = useTranslation();
@@ -98,19 +99,51 @@ const App = () => {
             </div>
           </div>
         </Section>
+      </Container>
+      <Tape />
+      <Container className="mt-8">
         <Section id="projects" className="text-white">
           <div className="text-center flex flex-col gap-2 max-w-[500px] mx-auto">
-            <span className="text-md text-secondary tracking-widest">{t('projects.uptitle')}</span>
-            <h2 className="text-4xl font-bold">
-              {t('projects.title')}
-            </h2>
+            <span className="text-md text-secondary tracking-widest">
+              {t('projects.uptitle')}
+            </span>
+            <h2 className="text-4xl font-bold">{t('projects.title')}</h2>
             <p className="text-gray-300">{t('projects.subtitle')}</p>
           </div>
           <div className="mt-4 flex flex-wrap gap-3">
-            <ProjectCard small title="Cordium.js" stack="Backend" stackIcon={<BiLogoTypescript />} description={t('projects.list.cordiumjs.description')} githubUrl="https://github.com/justheimsk/cordium.js" />
-            <ProjectCard title="Restman" stack="Frontend" stackIcon={<FaReact />} description={t('projects.list.restman.description')} imageUrl="./Restman.png" demoUrl="https://restman.vercel.app" githubUrl="https://gitub.com/justheimsk/Restman" />
-            <ProjectCard title={t('projects.list.dentist.title')} stack="Frontend" stackIcon={<FaReact />} description={t('projects.list.dentist.description')} imageUrl="./Dentist.png" demoUrl="https://dentist-demo1.vercel.app/" />
-            <ProjectCard small title={t('projects.list.all.title')} stack={t('projects.list.all.stack')} stackIcon={<FaPlus />} description="" githubUrl="https://github.com/justheimsk" />
+            <ProjectCard
+              small
+              title="Cordium.js"
+              stack="Backend"
+              stackIcon={<BiLogoTypescript />}
+              description={t('projects.list.cordiumjs.description')}
+              githubUrl="https://github.com/justheimsk/cordium.js"
+            />
+            <ProjectCard
+              title="Restman"
+              stack="Frontend"
+              stackIcon={<FaReact />}
+              description={t('projects.list.restman.description')}
+              imageUrl="./Restman.png"
+              demoUrl="https://restman.vercel.app"
+              githubUrl="https://gitub.com/justheimsk/Restman"
+            />
+            <ProjectCard
+              title={t('projects.list.dentist.title')}
+              stack="Frontend"
+              stackIcon={<FaReact />}
+              description={t('projects.list.dentist.description')}
+              imageUrl="./Dentist.png"
+              demoUrl="https://dentist-demo1.vercel.app/"
+            />
+            <ProjectCard
+              small
+              title={t('projects.list.all.title')}
+              stack={t('projects.list.all.stack')}
+              stackIcon={<FaPlus />}
+              description=""
+              githubUrl="https://github.com/justheimsk"
+            />
           </div>
         </Section>
       </Container>
