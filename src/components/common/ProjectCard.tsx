@@ -23,7 +23,7 @@ export function ProjectCard(props: ProjectCardProps) {
           width="900"
           height="900"
           alt="restman"
-          className="w-full md:w-[45%] h-auto rounded-lg object-cover"
+          className="w-full md:w-[45%] lg:w-[55%] h-auto rounded-lg object-cover"
         />
       ) : (
         ''
@@ -35,8 +35,8 @@ export function ProjectCard(props: ProjectCardProps) {
             <span>{props.stack}</span>
           </div>
           <span className="text-2xl font-bold">{props.title}</span>
+          <p className="text-gray-300 text-sm">{props.description}</p>
         </div>
-        <p className="text-gray-300 text-sm">{props.description}</p>
         <div className="flex items-center w-full gap-2">
           {props.demoUrl?.length ? (
             <Button bhref={props.demoUrl} className="w-full">Demo</Button>

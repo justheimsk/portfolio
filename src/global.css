@@ -2,9 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply bg-slate-950;
-  overflow-x: hidden;
+* {
+  z-index: 2;
+}
+
+body, html {
+  @apply bg-slate-950 overflow-x-hidden;
 }
 
 .nav-icon {
@@ -27,15 +30,22 @@ body {
   color: dodgerblue;
 }
 
+.gradient-secondary {
+  background: rgb(2, 0, 36);
+  background: -moz-linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(30, 144, 255, 1) 73%, rgba(0, 212, 255, 1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(30, 144, 255, 1) 73%, rgba(0, 212, 255, 1) 100%);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(30, 144, 255, 1) 73%, rgba(0, 212, 255, 1) 100%);
+}
+
 .ignore-nav {
-  height: calc(100vh - 32px);
+  height: calc(100svh - 32px - 40px);
 }
 
 #stars {
   position: absolute;
   top: 32px;
   left: 0;
-  z-index: -1;
+  z-index: 1 !important;
   pointer-events: none;
 }
 
@@ -43,6 +53,16 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999;
+  z-index: 999 !important;
   pointer-events: none;
+}
+
+.infinite-loop {
+  animation: infinite-loop 20s infinite linear;
+}
+
+@keyframes infinite-loop {
+  to {
+    transform: translateX(calc(-100% - 24px));
+  }
 }
