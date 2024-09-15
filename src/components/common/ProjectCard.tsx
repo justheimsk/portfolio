@@ -1,4 +1,3 @@
-import { FaReact } from 'react-icons/fa6';
 import { Button } from './Button';
 
 export interface ProjectCardProps extends React.HTMLAttributes<HTMLDivElement> {

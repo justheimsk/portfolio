@@ -18,7 +18,7 @@ export function WordsComponent() {
   return (
     <>
       {words.map((word) => (
-        <div key={Math.random() * 99999} className="flex items-center gap-6">
+        <div key={word} className="flex items-center gap-6">
           <FaStar />
           <span>{word}</span>
         </div>

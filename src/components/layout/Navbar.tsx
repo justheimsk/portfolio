@@ -42,8 +42,8 @@ export function Navbar() {
             <Dropdown.Menu>
               <IoLanguage className="nav-icon" />
               <Dropdown.Content>
-                {Object.values(langs).map((lang, i) => (
-                  <Dropdown.Item onClick={() => i18n.changeLanguage(lang.meta.code)} key={i}>{lang.meta.name}</Dropdown.Item>
+                {Object.values(langs).map((lang) => (
+                  <Dropdown.Item onClick={() => i18n.changeLanguage(lang.meta.code)} key={lang.meta.code}>{lang.meta.name}</Dropdown.Item>
                 ))}
               </Dropdown.Content>
             </Dropdown.Menu>
