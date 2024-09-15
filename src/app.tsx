@@ -124,7 +124,7 @@ const App = () => {
               stack="Frontend"
               stackIcon={<FaReact />}
               description={t('projects.list.restman.description')}
-              imageUrl="./Restman.png"
+              imageUrl="./Restman.webp"
               demoUrl="https://restman.vercel.app"
               githubUrl="https://gitub.com/justheimsk/Restman"
             />
@@ -133,7 +133,7 @@ const App = () => {
               stack="Frontend"
               stackIcon={<FaReact />}
               description={t('projects.list.dentist.description')}
-              imageUrl="./Dentist.png"
+              imageUrl="./Dentist.webp"
               demoUrl="https://dentist-demo1.vercel.app/"
             />
             <ProjectCard

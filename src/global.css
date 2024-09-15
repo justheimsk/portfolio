@@ -10,10 +10,6 @@ body {
   @apply bg-slate-950 overflow-x-hidden;
 }
 
-body, html {
-  @apply min-h-svh;
-}
-
 .nav-icon {
   @apply text-xl cursor-pointer;
 }
