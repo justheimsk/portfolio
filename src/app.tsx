@@ -85,7 +85,7 @@ const App = () => {
               <SiTailwindcss />
               <BiLogoPostgresql />
             </div>
-            <h2 className="text-4xl md:text-6xl font-bold">{t('title')}</h2>
+            <h2 className="text-4xl md:text-6xl w-auto font-bold bg-gradient-to-r from-blue-800 via-green-500 to-cyan-500 inline-block text-transparent bg-clip-text">{t('title')}</h2>
             <p className="max-w-[500px] text-sm md:text-md text-gray-300">
               {t('subtitle')}
             </p>
@@ -93,7 +93,7 @@ const App = () => {
               <Button bsize="big" bstyle="outline">
                 {t('buttons.projects')}
               </Button>
-              <Button bsize="big">
+              <Button clickEffect="shrink" bsize="big">
                 {t('buttons.resume')} <FaDownload />
               </Button>
             </div>

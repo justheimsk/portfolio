@@ -23,7 +23,7 @@ export function Navbar() {
           <div className="flex md:hidden items-center h-full text-white justify-between px-4">
             <span className="font-semibold">Vonderheimsk</span>
             <div className="flex items-center gap-2">
-              <Button rounded="rounded-full" className="font-semibold text-[12px] px-2 py-0.5">
+              <Button clickEffect="shrink" rounded="rounded-full" className="font-semibold text-[12px] px-2 py-0.5">
                 {t('buttons.resume')}
               </Button>
               <RxHamburgerMenu onClick={() => setActive(!active)} className="cursor-pointer text-xl" />
@@ -56,7 +56,7 @@ export function Navbar() {
               <FaGithub className="nav-icon" />
             </a>
             <FaDiscord className="nav-icon text-[#5865F2]" />
-            <Button rounded="rounded-full">{t('buttons.resume')}</Button>
+            <Button clickEffect="shrink" rounded="rounded-full">{t('buttons.resume')}</Button>
           </div>
         </div>
       </Container>
