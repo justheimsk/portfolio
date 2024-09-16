@@ -110,7 +110,7 @@ const App = () => {
             <h2 className="text-4xl font-bold">{t('projects.title')}</h2>
             <p className="text-gray-300">{t('projects.subtitle')}</p>
           </div>
-          <div className="mt-4 flex flex-wrap gap-3">
+          <div className="mt-8 flex flex-wrap gap-3">
             <ProjectCard
               small
               title="Cordium.js"

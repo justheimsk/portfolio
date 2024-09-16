@@ -18,7 +18,7 @@ self.onmessage = (e) => {
       stars.init(e.data.canvas);
       stars.resize();
     } catch(err) {
-      console.error("Failed to initialize webglrenderer")
+      console.error("Failed to initialize webglrenderer", err);
     }
   } else if(e.data.event === "resize") {
     stars.options.width = e.data.width;

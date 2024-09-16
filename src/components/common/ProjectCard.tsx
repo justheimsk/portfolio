@@ -29,21 +29,27 @@ export function ProjectCard(props: ProjectCardProps) {
       )}
       <div className="flex flex-col h-full w-full gap-5 md:gap-0 justify-between">
         <div className="flex gap-2 flex-col">
-          <div className="flex text-md items-center gap-1">
-            {props.stackIcon}
-            <span>{props.stack}</span>
+          <div className="flex justify-between">
+            <div className="flex w-auto items-center border border-white/10 gap-1 px-3 py-0.5 text-sm text-center justify-center rounded-md bg-gray-900">
+              {props.stackIcon}
+              <span>{props.stack}</span>
+            </div>
           </div>
           <span className="text-2xl font-bold">{props.title}</span>
           <p className="text-gray-300 text-sm">{props.description}</p>
         </div>
         <div className="flex items-center w-full gap-2">
           {props.demoUrl?.length ? (
-            <Button bhref={props.demoUrl} className="w-full">Demo</Button>
+            <Button bhref={props.demoUrl} className="w-full">
+              Demo
+            </Button>
           ) : (
             ''
           )}
           {props.githubUrl?.length ? (
-            <Button bhref={props.githubUrl} className="w-full">Github</Button>
+            <Button bhref={props.githubUrl} className="w-full">
+              Github
+            </Button>
           ) : (
             ''
           )}
