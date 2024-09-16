@@ -21,6 +21,7 @@ import { SiTailwindcss } from 'react-icons/si';
 import { useTranslation } from 'react-i18next';
 import { ProjectCard } from './components/common/ProjectCard';
 import { Tape } from './components/common/Tape';
+import { Analytics } from '@vercel/analytics/react';
 
 const App = () => {
   const { t } = useTranslation();
@@ -69,6 +70,7 @@ const App = () => {
 
   return (
     <>
+      <Analytics />
       <UpperNavbar id="home" content={t('uppernavbar')} />
       <Navbar />
       <Container>
