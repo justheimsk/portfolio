@@ -23,6 +23,7 @@ import { ProjectCard } from './components/common/ProjectCard';
 import { Tape } from './components/common/Tape';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
+import langs from './shared/langs';
 
 const App = () => {
   const { t } = useTranslation();
@@ -78,6 +79,8 @@ const App = () => {
 
         })
       }
+
+      document.documentElement.lang = Object.keys(langs).includes(navigator.language || 'en-US') ? navigator.language : 'en-US';
     } catch (_) {}
 
     try {
