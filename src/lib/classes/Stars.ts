@@ -18,6 +18,7 @@ export class Stars implements Effect {
   private angle = 0;
   public options: StarsOptions;
   public rendering = false;
+  private paused = false;
 
   public constructor(options?: StarsOptions) {
     this.options = options || {};
@@ -39,6 +40,17 @@ export class Stars implements Effect {
 
   private random() {
     return Math.random() * 50 - 25;
+  }
+
+  public pause() {
+    this.paused = true;
+    this.rendering = false;
+  }
+
+  public resume() {
+    this.paused = false;
+    this.rendering = true;
+    this.render();
   }
 
   private generateStars(count: number) {
@@ -92,6 +104,8 @@ export class Stars implements Effect {
   }
 
   private render() {
+    if(this.paused) return;
+
     this.angle += 0.0015;
     this.camera.position.x = this.radius * Math.cos(this.angle);
     this.camera.position.z = this.radius * Math.sin(this.angle);

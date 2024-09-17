@@ -25,5 +25,9 @@ self.onmessage = (e) => {
     stars.options.height = e.data.height;
 
     stars.resize();
+  } else if(e.data.event == "pause") {
+    stars.pause();
+  } else if(e.data.event == "resume") {
+    stars.resume();
   }
 };

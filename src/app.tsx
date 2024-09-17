@@ -30,6 +30,7 @@ const App = () => {
   useEffect(() => {
     try {
       const canvas = document.getElementById('stars') as HTMLCanvasElement;
+      let paused = false;
 
       if (canvas) {
         canvas.width = window.innerWidth;
@@ -56,6 +57,26 @@ const App = () => {
             height: window.innerHeight,
           });
         });
+        
+        window.addEventListener('scroll', () => {
+          const rect = canvas.getBoundingClientRect();
+
+          if(rect.bottom < 0 && !paused) {
+            worker.postMessage({
+              event: 'pause'
+            });
+            paused = true;
+          }
+
+          if(rect.bottom > 0 && paused) {
+              worker.postMessage({
+                event: 'resume'
+              });
+
+              paused = false
+          }
+
+        })
       }
     } catch (_) {}
 
@@ -89,7 +110,9 @@ const App = () => {
               <SiTailwindcss />
               <BiLogoPostgresql />
             </div>
-            <h2 className="text-4xl md:text-6xl w-auto font-bold bg-gradient-to-r from-blue-800 via-green-500 to-cyan-500 inline-block text-transparent bg-clip-text">{t('title')}</h2>
+            <h2 className="text-4xl md:text-6xl w-auto font-bold bg-gradient-to-r from-blue-800 via-green-500 to-cyan-500 inline-block text-transparent bg-clip-text">
+              {t('title')}
+            </h2>
             <p className="max-w-[500px] text-sm md:text-md text-gray-300">
               {t('subtitle')}
             </p>

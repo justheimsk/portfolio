@@ -16,7 +16,7 @@ export function Content(props: React.HTMLAttributes<HTMLDivElement>) {
 
 export function Item(props: React.HTMLAttributes<HTMLDivElement>) {
   return (
-    <div {...props} className="w-full h-7 flex items-center justify-between px-2 text-sm hover:bg-white/10 transition rounded-md">
+    <div {...props} className="w-full cursor-pointer h-7 flex items-center justify-between px-2 text-sm hover:bg-white/10 transition rounded-md">
       {props.children}
     </div>
   )
