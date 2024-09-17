@@ -9,13 +9,13 @@ const stars = new Stars({
   clearColor: new Color(0xffffff),
 });
 
-self.onmessage = (e) => {
+self.onmessage = async (e) => {
   if (e.data.event === "init" && e.data.canvas) {
     stars.options.width = e.data.width;
     stars.options.height = e.data.height;
 
     try {
-      stars.init(e.data.canvas);
+      await stars.init(e.data.canvas);
       stars.resize();
     } catch(err) {
       console.error("Failed to initialize webglrenderer", err);

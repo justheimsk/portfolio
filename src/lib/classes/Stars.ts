@@ -53,19 +53,21 @@ export class Stars implements Effect {
     this.render();
   }
 
-  private generateStars(count: number) {
-    const starfield: Sprite[] = [];
-    const material = new SpriteMaterial({ color: 0xffffff });
+  private generateStars(count: number): Promise<Sprite[]> {
+    return new Promise((resolve) => {
+      const starfield: Sprite[] = [];
+      const material = new SpriteMaterial({ color: 0xffffff });
 
-    for(let i = 0; i < count; i++) {
-      const star = new Sprite(material);
-      star.position.set(this.random(), this.random(), this.random());
-      star.scale.set(0.05, 0.05, 0.05);
+      for(let i = 0; i < count; i++) {
+        const star = new Sprite(material);
+        star.position.set(this.random(), this.random(), this.random());
+        star.scale.set(0.05, 0.05, 0.05);
 
-      starfield.push(star);
-    }
+        starfield.push(star);
+      }
 
-    return starfield;
+      resolve(starfield);
+    });
   }
 
   public resize() {
@@ -79,7 +81,7 @@ export class Stars implements Effect {
     window.addEventListener('resize', this.resize);
   }
 
-  public init(canvas?: HTMLCanvasElement) {
+  public async init(canvas?: HTMLCanvasElement) {
     this.scene.clear();
 
     if(canvas) this.options.rendererOptions = { canvas, ...this.options.rendererOptions };
@@ -90,10 +92,8 @@ export class Stars implements Effect {
       if(this.options.clearColor) this.renderer.setClearColor(this.options.clearColor, 0);
     }
 
-    const stars = this.generateStars(1500);
-    for(const star of stars) {
-      this.scene.add(star)
-    }
+    const stars = await this.generateStars(1500);
+    this.scene.add(...stars);
 
     if(!this.options.rendererOptions?.canvas) document.body.appendChild(this.renderer.domElement);
     
