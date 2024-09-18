@@ -100,7 +100,7 @@ export function NavbarMenu() {
         {t('navbar.home')}
       </NavbarLink>
       <NavbarLink nhref="projects">{t('navbar.projects')}</NavbarLink>
-      <NavbarLink>{t('navbar.skills')}</NavbarLink>
+      <NavbarLink nhref="skills">{t('navbar.skills')}</NavbarLink>
       <NavbarLink>{t('navbar.contact')}</NavbarLink>
     </>
   );

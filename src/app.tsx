@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Navbar } from './components/layout/Navbar';
 import { UpperNavbar } from './components/layout/UpperNavbar';
 import './global.css';
@@ -24,9 +24,39 @@ import { Tape } from './components/common/Tape';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import langs from './shared/langs';
+import * as Orbit from './components/common/Orbit';
+import * as Skills from './shared/skills';
 
 const App = () => {
   const { t } = useTranslation();
+  const [opIndex, setOpIndex] = useState(0);
+
+  useEffect(() => {
+    let idx = 0;
+    let viewport = false;
+    const el = document.getElementById('skills');
+    if(!el) return;
+
+    const observer = new IntersectionObserver((entries) => {
+      for(const entry of entries) {
+        if(entry.isIntersecting) {
+          viewport = true;
+          observer.disconnect();
+        }
+      }
+    }, {
+      threshold: 0.3
+    });
+    observer.observe(el);
+
+    const int = setInterval(() => {
+      if (!viewport) return;
+      setOpIndex(idx + 1);
+      idx++;
+
+      if (idx >= 20) clearInterval(int);
+    }, 500);
+  }, []);
 
   useEffect(() => {
     try {
@@ -58,29 +88,29 @@ const App = () => {
             height: window.innerHeight,
           });
         });
-        
-        window.addEventListener('scroll', () => {
-          const rect = canvas.getBoundingClientRect();
 
-          if(rect.bottom < 0 && !paused) {
-            worker.postMessage({
-              event: 'pause'
-            });
-            paused = true;
+        const observer = new IntersectionObserver((entries) => {
+          console.log('oi')
+          for(const entry of entries) {
+            if(entry.isIntersecting && paused) {
+              worker.postMessage({ event: 'resume' });
+              paused = false;
+            }
+
+            if(!entry.isIntersecting && !paused) {
+              worker.postMessage({ event: 'pause' });
+              paused = true;
+            }
           }
-
-          if(rect.bottom > 0 && paused) {
-              worker.postMessage({
-                event: 'resume'
-              });
-
-              paused = false
-          }
-
-        })
+        });
+        observer.observe(canvas);
       }
 
-      document.documentElement.lang = Object.keys(langs).includes(navigator.language || 'en-US') ? navigator.language : 'en-US';
+      document.documentElement.lang = Object.keys(langs).includes(
+        navigator.language || 'en-US',
+      )
+        ? navigator.language
+        : 'en-US';
     } catch (_) {}
 
     try {
@@ -100,7 +130,10 @@ const App = () => {
       <UpperNavbar id="home" content={t('uppernavbar')} />
       <Navbar />
       <Container>
-        <Section className="ignore-nav flex items-center text-white justify-center">
+        <Section
+          hero
+          className="ignore-nav flex items-center text-white justify-center"
+        >
           <div className="flex flex-col items-center justify-center gap-4 max-w-[650px] text-center">
             <div className="flex items-center justify-center gap-2 text-2xl md:text-3xl">
               <BiLogoTypescript />
@@ -174,6 +207,43 @@ const App = () => {
               description=""
               githubUrl="https://github.com/justheimsk"
             />
+          </div>
+        </Section>
+        <Section id="skills" className="mt-8 text-white">
+          <div className="text-center flex flex-col gap-2 max-w-[500px] mx-auto">
+            <span className="text-md text-secondary tracking-widest">
+              FULLSTACK
+            </span>
+            <h2 className="text-4xl font-bold">Habilidades</h2>
+            <p className="text-gray-300">
+              As habilidades e tecnologias que aprendi e me aperfeiçoei
+              estudando programação
+            </p>
+          </div>
+          <div className="flex items-center justify-center gap-4 md:gap-12 flex-wrap">
+            <Orbit.Container>
+              <Orbit.Center />
+              {Skills.Backend.map((skill, i) => (
+                <Orbit.Child
+                  className={`${opIndex >= i ? 'opacity-100' : 'opacity-0'}`}
+                  imageUrl={`./skills/${skill.img}`}
+                  id={(i + 1).toString()}
+                  key={skill.name}
+                />
+              ))}
+            </Orbit.Container>
+            <Orbit.Container>
+              <Orbit.Center />
+              {Skills.Frontend.map((skill, i) => (
+                <Orbit.Child
+                  className={`${opIndex >= (i + 10) ? 'opacity-100' : 'opacity-0'}`}
+                  //className={`${window.innerWidth < 889 ? `${opIndex >= i + 10 ? 'opacity-100' : 'opacity-0'}` : `${opIndex >= i ? 'opacity-100' : 'opacity-0'}`}`}
+                  imageUrl={`./skills/${skill.img}`}
+                  id={(i + 1).toString()}
+                  key={skill.name}
+                />
+              ))}
+            </Orbit.Container>
           </div>
         </Section>
       </Container>

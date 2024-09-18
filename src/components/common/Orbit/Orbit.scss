@@ -1,0 +1,52 @@
+$orbit-radius: 130px;
+$count: 10;
+$animation-duration: 40s;
+
+.orbit-container {
+  width: 350px;
+  height: 400px;
+  display: block;
+  margin-top: 25px;
+  position: relative;
+
+  .orbit--center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border: 2px dashed white;
+    border-radius: 50%;
+  }
+
+  @for $i from 1 through $count + 10 {
+    .orbit-child-#{$i} {
+      @apply bg-white/10 border border-white/10;
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+      border-radius: 50%;
+      top: 43.5%;
+      left: 42.5%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform-origin: -$orbit-radius;
+      animation: orbit $animation-duration linear infinite;
+      animation-delay: calc(-#{$animation-duration} / $count * $i);
+      transition: .5s;
+    }
+  }
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translateX($orbit-radius) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX($orbit-radius) rotate(-360deg);
+  }
+}

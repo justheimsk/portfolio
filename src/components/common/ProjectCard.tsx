@@ -14,7 +14,7 @@ export interface ProjectCardProps extends React.HTMLAttributes<HTMLDivElement> {
 export function ProjectCard(props: ProjectCardProps) {
   return (
     <div
-      className={`flex-col md:flex-row flex p-3 bg-white/10 border border-white/30 rounded-lg sm:max-w-[48%] ${props.small ? 'md:max-w-[36%]' : 'md:max-w-[62%]'} w-full min-h-56  gap-3`}
+      className={`flex-col md:flex-row flex p-3 bg-white/10 border border-white/30 rounded-lg sm:max-w-[48%] ${props.small ? 'md:max-w-[36%]' : 'md:max-w-[62%]'} w-full min-h-56 gap-3`}
     >
       {props.imageUrl?.length && !props.small ? (
         <img

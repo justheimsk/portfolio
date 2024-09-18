@@ -48,6 +48,7 @@ export class Stars implements Effect {
   }
 
   public resume() {
+    if(!this.paused) return;
     this.paused = false;
     this.rendering = true;
     this.render();
