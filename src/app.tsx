@@ -26,94 +26,24 @@ import { SpeedInsights } from '@vercel/speed-insights/react';
 import langs from './shared/langs';
 import * as Orbit from './components/common/Orbit';
 import * as Skills from './shared/skills';
+import InitObservers from './lib/utils/InitObservers';
+import { InitWebWorker } from './lib/utils/InitWebWorker';
 
 const App = () => {
   const { t } = useTranslation();
-  const [opIndex, setOpIndex] = useState(0);
-
-  useEffect(() => {
-    let idx = 0;
-    let viewport = false;
-    const el = document.getElementById('skills');
-    if(!el) return;
-
-    const observer = new IntersectionObserver((entries) => {
-      for(const entry of entries) {
-        if(entry.isIntersecting) {
-          viewport = true;
-          observer.disconnect();
-        }
-      }
-    }, {
-      threshold: 0.3
-    });
-    observer.observe(el);
-
-    const int = setInterval(() => {
-      if (!viewport) return;
-      setOpIndex(idx + 1);
-      idx++;
-
-      if (idx >= 20) clearInterval(int);
-    }, 500);
-  }, []);
+  const [opIndex, setOpIndex] = useState<number>(0);
 
   useEffect(() => {
     try {
-      const canvas = document.getElementById('stars') as HTMLCanvasElement;
-      let paused = false;
-
-      if (canvas) {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        const offscreen = canvas.transferControlToOffscreen();
-        const worker = new Worker(
-          new URL('./shared/worker.ts', import.meta.url),
-          { type: 'module' },
-        );
-        worker.postMessage(
-          {
-            event: 'init',
-            canvas: offscreen,
-            width: window.innerWidth,
-            height: window.innerHeight,
-          },
-          [offscreen],
-        );
-
-        window.addEventListener('resize', () => {
-          worker.postMessage({
-            event: 'resize',
-            width: window.innerWidth,
-            height: window.innerHeight,
-          });
-        });
-
-        const observer = new IntersectionObserver((entries) => {
-          console.log('oi')
-          for(const entry of entries) {
-            if(entry.isIntersecting && paused) {
-              worker.postMessage({ event: 'resume' });
-              paused = false;
-            }
-
-            if(!entry.isIntersecting && !paused) {
-              worker.postMessage({ event: 'pause' });
-              paused = true;
-            }
-          }
-        });
-        observer.observe(canvas);
-      }
+      const thread = InitWebWorker('stars');
+      if(thread) InitObservers(setOpIndex, thread.canvas, thread.worker);
 
       document.documentElement.lang = Object.keys(langs).includes(
         navigator.language || 'en-US',
       )
         ? navigator.language
         : 'en-US';
-    } catch (_) {}
 
-    try {
       const effects = [new CustomCursor()];
       for (const effect of effects) {
         effect.init();
@@ -220,7 +150,7 @@ const App = () => {
               estudando programação
             </p>
           </div>
-          <div className="flex items-center justify-center gap-4 md:gap-12 flex-wrap">
+          <div className="flex items-center justify-center gap-4 sm:gap-12 flex-wrap">
             <Orbit.Container>
               <Orbit.Center />
               {Skills.Backend.map((skill, i) => (
@@ -236,7 +166,7 @@ const App = () => {
               <Orbit.Center />
               {Skills.Frontend.map((skill, i) => (
                 <Orbit.Child
-                  className={`${opIndex >= (i + 10) ? 'opacity-100' : 'opacity-0'}`}
+                  className={`${opIndex >= i + 10 ? 'opacity-100' : 'opacity-0'}`}
                   //className={`${window.innerWidth < 889 ? `${opIndex >= i + 10 ? 'opacity-100' : 'opacity-0'}` : `${opIndex >= i ? 'opacity-100' : 'opacity-0'}`}`}
                   imageUrl={`./skills/${skill.img}`}
                   id={(i + 1).toString()}

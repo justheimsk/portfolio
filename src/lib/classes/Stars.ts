@@ -1,5 +1,13 @@
-import { type Color, PerspectiveCamera, Scene, Sprite, SpriteMaterial, WebGLRenderer, type WebGLRendererParameters } from "three";
-import type { Effect } from "../interfaces/Effect";
+import {
+  type Color,
+  PerspectiveCamera,
+  Scene,
+  Sprite,
+  SpriteMaterial,
+  WebGLRenderer,
+  type WebGLRendererParameters,
+} from 'three';
+import type { Effect } from '../interfaces/Effect';
 
 export interface StarsOptions {
   elId?: string;
@@ -25,13 +33,15 @@ export class Stars implements Effect {
     this.scene = new Scene();
     this.camera = new PerspectiveCamera(75, this.width / this.height, 3, 1000);
 
-
     this.render = this.render.bind(this);
     this.resize = this.resize.bind(this);
   }
 
   private get height() {
-    return this.options.maxHeight && (this.options.height ?? window.innerHeight) > this.options.maxHeight ? this.options.maxHeight : (this.options.height ?? window.innerHeight);
+    return this.options.maxHeight &&
+      (this.options.height ?? window.innerHeight) > this.options.maxHeight
+      ? this.options.maxHeight
+      : this.options.height ?? window.innerHeight;
   }
 
   private get width() {
@@ -48,7 +58,7 @@ export class Stars implements Effect {
   }
 
   public resume() {
-    if(!this.paused) return;
+    if (!this.paused) return;
     this.paused = false;
     this.rendering = true;
     this.render();
@@ -59,7 +69,7 @@ export class Stars implements Effect {
       const starfield: Sprite[] = [];
       const material = new SpriteMaterial({ color: 0xffffff });
 
-      for(let i = 0; i < count; i++) {
+      for (let i = 0; i < count; i++) {
         const star = new Sprite(material);
         star.position.set(this.random(), this.random(), this.random());
         star.scale.set(0.05, 0.05, 0.05);
@@ -85,27 +95,34 @@ export class Stars implements Effect {
   public async init(canvas?: HTMLCanvasElement) {
     this.scene.clear();
 
-    if(canvas) this.options.rendererOptions = { canvas, ...this.options.rendererOptions };
+    if (canvas)
+      this.options.rendererOptions = {
+        canvas,
+        ...this.options.rendererOptions,
+      };
     this.renderer = new WebGLRenderer(this.options?.rendererOptions);
-    
-    if(this.options) {
-      if(this.options.elId) this.renderer.domElement.id = this.options.elId;
-      if(this.options.clearColor) this.renderer.setClearColor(this.options.clearColor, 0);
+
+    if (this.options) {
+      if (this.options.elId) this.renderer.domElement.id = this.options.elId;
+      if (this.options.clearColor)
+        this.renderer.setClearColor(this.options.clearColor, 0);
     }
 
-    const stars = await this.generateStars(1500);
-    this.scene.add(...stars);
+    this.generateStars(1500).then((stars) => {
+      this.scene.add(...stars);
+    });
 
-    if(!this.options.rendererOptions?.canvas) document.body.appendChild(this.renderer.domElement);
-    
-    if(!this.rendering) {
+    if (!this.options.rendererOptions?.canvas)
+      document.body.appendChild(this.renderer.domElement);
+
+    if (!this.rendering) {
       this.render();
       this.rendering = true;
     }
   }
 
   private render() {
-    if(this.paused) return;
+    if (this.paused) return;
 
     this.angle += 0.0015;
     this.camera.position.x = this.radius * Math.cos(this.angle);
