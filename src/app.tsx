@@ -24,7 +24,7 @@ import { Tape } from './components/common/Tape';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import langs from './shared/langs';
-import * as Orbit from './components/common/Orbit';
+import * as Orbit from './components/layout/Orbit';
 import * as Skills from './shared/skills';
 import InitObservers from './lib/utils/InitObservers';
 import { InitWebWorker } from './lib/utils/InitWebWorker';
