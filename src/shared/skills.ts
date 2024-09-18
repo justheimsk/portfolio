@@ -1,85 +1,85 @@
 export const Frontend = [
   {
     img: 'react.webp',
-    name: "React"
+    name: 'React',
   },
   {
     img: 'nextjs.webp',
-    name: 'NextJS'
+    name: 'NextJS',
   },
   {
-    img: "html.webp",
-    name: "HTML"
+    img: 'html.webp',
+    name: 'HTML',
   },
   {
-    img: "css.webp",
-    name: "CSS"
+    img: 'css.webp',
+    name: 'CSS',
   },
   {
-    img: "SASS.webp",
-    name: "SASS"
+    img: 'SASS.webp',
+    name: 'SASS',
   },
   {
-    img: "redux.webp",
-    name: "Redux"
+    img: 'redux.webp',
+    name: 'Redux',
   },
   {
-    img: "tailwind.webp",
-    name: "TailwindCSS"
+    img: 'tailwind.webp',
+    name: 'TailwindCSS',
   },
   {
-    img: "git.webp",
-    name: "Git"
+    img: 'vue.webp',
+    name: 'Vue',
   },
   {
-    img: "vue.webp",
-    name: "Vue"
+    img: 'gsap.webp',
+    name: 'GSAP',
   },
   {
-    img: "gsap.webp",
-    name: "GSAP"
+    img: 'Javascript.webp',
+    name: 'Javascript',
   },
-]
+];
 
 export const Backend = [
   {
     img: 'typescript.webp',
-    name: 'Typescript'
+    name: 'Typescript',
   },
   {
     img: 'Clang.webp',
-    name: 'C'
+    name: 'C',
   },
   {
-    img: 'Javascript.webp',
-    name: "Javascript"
+    img: 'git.webp',
+    name: 'Git',
   },
   {
-    img: "docker.webp",
-    name: "Docker"
+    img: 'docker.webp',
+    name: 'Docker',
   },
   {
-    img: "nodejs.webp",
-    name: "Nodejs"
+    img: 'nodejs.webp',
+    name: 'Nodejs',
   },
   {
-    img: "postgres.webp",
-    name: "PostgreSQL"
+    img: 'postgres.webp',
+    name: 'PostgreSQL',
   },
   {
-    img: "linux.webp",
-    name: "Linux"
+    img: 'linux.webp',
+    name: 'Linux',
   },
   {
-    img: "mongodb.webp",
-    name: "MongoDB"
+    img: 'mongodb.webp',
+    name: 'MongoDB',
   },
   {
-    img: "libuv.webp",
-    name: "Libuv"
+    img: 'libuv.webp',
+    name: 'Libuv',
   },
   {
-    img: "nginx.webp",
-    name: "Nginx"
+    img: 'nginx.webp',
+    name: 'Nginx',
   },
-]
+];

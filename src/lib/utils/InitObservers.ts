@@ -43,7 +43,7 @@ export default function InitObservers(
 
   const int = setInterval(() => {
     if (!viewport) return;
-    setOpIndex(idx + 1);
+    setOpIndex(idx);
     idx++;
 
     if (idx >= 20) clearInterval(int);
