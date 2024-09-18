@@ -1,6 +1,6 @@
 export const Frontend = [
   {
-    img: 'react.png',
+    img: 'react.webp',
     name: "React"
   },
   {
@@ -8,78 +8,78 @@ export const Frontend = [
     name: 'NextJS'
   },
   {
-    img: "html.png",
+    img: "html.webp",
     name: "HTML"
   },
   {
-    img: "css.png",
+    img: "css.webp",
     name: "CSS"
   },
   {
-    img: "SASS.png",
+    img: "SASS.webp",
     name: "SASS"
   },
   {
-    img: "redux.png",
+    img: "redux.webp",
     name: "Redux"
   },
   {
-    img: "tailwind.png",
+    img: "tailwind.webp",
     name: "TailwindCSS"
   },
   {
-    img: "git.png",
+    img: "git.webp",
     name: "Git"
   },
   {
-    img: "vue.png",
+    img: "vue.webp",
     name: "Vue"
   },
   {
-    img: "gsap.png",
+    img: "gsap.webp",
     name: "GSAP"
   },
 ]
 
 export const Backend = [
   {
-    img: 'typescript.png',
+    img: 'typescript.webp',
     name: 'Typescript'
   },
   {
-    img: 'Clang.png',
+    img: 'Clang.webp',
     name: 'C'
   },
   {
-    img: 'Javascript.png',
+    img: 'Javascript.webp',
     name: "Javascript"
   },
   {
-    img: "docker.png",
+    img: "docker.webp",
     name: "Docker"
   },
   {
-    img: "nodejs.png",
+    img: "nodejs.webp",
     name: "Nodejs"
   },
   {
-    img: "postgres.png",
+    img: "postgres.webp",
     name: "PostgreSQL"
   },
   {
-    img: "linux.png",
+    img: "linux.webp",
     name: "Linux"
   },
   {
-    img: "mongodb.png",
+    img: "mongodb.webp",
     name: "MongoDB"
   },
   {
-    img: "libuv.png",
+    img: "libuv.webp",
     name: "Libuv"
   },
   {
-    img: "nginx.png",
+    img: "nginx.webp",
     name: "Nginx"
   },
 ]
