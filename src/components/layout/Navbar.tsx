@@ -15,8 +15,8 @@ export function Navbar() {
 
   return (
     <>
-      <div className="sticky w-full md:w-auto h-11 md:h-8 top-4 inline-block left-0 md:right-1/2 md:left-1/2 md:translate-x-[-50%] z-50 px-4 md:px-0">
-        <nav className="backdrop-blur rounded-full md:flex md:items-center h-full bg-white/10 border border-white/10">
+      <div className="sticky w-full md:w-auto h-11 md:h-8 top-4 inline-block left-0 md:right-1/2 md:left-1/2 md:translate-x-[-50%] z-30 px-4 md:px-0">
+        <nav className="backdrop-blur rounded-full md:flex md:items-center h-full bg-white/10 border border-white/30">
           <div className="hidden md:flex items-center text-sm gap-2 p-1">
             <NavbarMenu />
           </div>

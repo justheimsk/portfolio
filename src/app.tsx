@@ -9,6 +9,7 @@ import { Button } from './components/common/Button';
 import {
   FaDocker,
   FaDownload,
+  FaFileCircleXmark,
   FaLinux,
   FaNodeJs,
   FaPlus,
@@ -28,15 +29,17 @@ import * as Orbit from './components/layout/Orbit';
 import * as Skills from './shared/skills';
 import InitObservers from './lib/utils/InitObservers';
 import { InitWebWorker } from './lib/utils/InitWebWorker';
+import * as Modal from './components/common/Modal';
 
 const App = () => {
   const { t } = useTranslation();
   const [opIndex, setOpIndex] = useState<number>(0);
+  const [modalActive, setModalActive] = useState<boolean>(false);
 
   useEffect(() => {
     try {
-      const thread = InitWebWorker('stars');
-      if(thread) InitObservers(setOpIndex, thread.canvas, thread.worker);
+      //const thread = InitWebWorker('stars');
+      //if(thread) InitObservers(setOpIndex, thread.canvas, thread.worker);
 
       document.documentElement.lang = Object.keys(langs).includes(
         navigator.language || 'en-US',
@@ -55,6 +58,26 @@ const App = () => {
 
   return (
     <>
+      <Modal.Container
+        active={modalActive}
+        onClose={() => setModalActive(false)}
+        className="text-white"
+      >
+        <Modal.Header>
+          <span className="font-bold text-lg">Baixar curriculo</span>
+        </Modal.Header>
+        <Modal.Content>
+          <div className="w-full h-44 border border-white/40 flex flex-col gap-4 items-center justify-center rounded-md">
+            <FaFileCircleXmark className="text-5xl" />
+            <span className="font-bold">Curriculo indisponivel</span>
+          </div>
+          <div className="mt-4 flex items-center justify-end">
+            <Button clickEffect="shrink" bsize="normal">
+              {t('buttons.resume')} <FaDownload />
+            </Button>
+          </div>
+        </Modal.Content>
+      </Modal.Container>
       <Analytics />
       <SpeedInsights />
       <UpperNavbar id="home" content={t('uppernavbar')} />
@@ -86,7 +109,11 @@ const App = () => {
               <Button bsize="big" bstyle="outline">
                 {t('buttons.projects')}
               </Button>
-              <Button clickEffect="shrink" bsize="big">
+              <Button
+                onClick={() => setModalActive(true)}
+                clickEffect="shrink"
+                bsize="big"
+              >
                 {t('buttons.resume')} <FaDownload />
               </Button>
             </div>
