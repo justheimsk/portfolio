@@ -38,8 +38,8 @@ const App = () => {
 
   useEffect(() => {
     try {
-      //const thread = InitWebWorker('stars');
-      //if(thread) InitObservers(setOpIndex, thread.canvas, thread.worker);
+      const thread = InitWebWorker('stars');
+      if(thread) InitObservers(setOpIndex, thread.canvas, thread.worker);
 
       document.documentElement.lang = Object.keys(langs).includes(
         navigator.language || 'en-US',
