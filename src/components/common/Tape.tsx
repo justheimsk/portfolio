@@ -1,4 +1,5 @@
 import { FaStar } from 'react-icons/fa6';
+import { excludeProps } from '../../lib/utils/PropsExcluder';
 
 const words = [
   'PERFORMANT',
@@ -27,11 +28,15 @@ export function WordsComponent() {
   );
 }
 
-export function Tape() {
+export interface TapeProps extends React.HTMLAttributes<HTMLDivElement> {
+  invert?: boolean;
+}
+
+export function Tape(props: TapeProps) {
   return (
-    <div className="w-[100vw] max-w-[100vw] overflow-x-hidden text-white font-bold h-12 gradient-secondary -rotate-3">
+    <div {...excludeProps(props, 'invert')} className={`w-[100vw] max-w-[100vw] overflow-x-hidden text-white font-bold h-12 gradient-secondary ${props.invert ? 'rotate-3' : '-rotate-3'} ${props.className}`}>
       <div className="flex w-svw h-full [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-        <div className="infinite-loop w-svw flex items-center gap-6 h-full">
+        <div className={`${props.invert ? 'infinite-loop-invert' : 'infinite-loop'} w-svw flex items-center gap-6 h-full`}>
           <WordsComponent />
           <WordsComponent />
           <WordsComponent />

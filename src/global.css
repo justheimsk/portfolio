@@ -57,8 +57,21 @@ body {
   animation: infinite-loop 20s infinite linear;
 }
 
+.infinite-loop-invert {
+  animation: infinite-loop-invert 20s infinite linear;
+}
+
 @keyframes infinite-loop {
   to {
     transform: translateX(calc(-100% - 24px));
+  }
+}
+
+@keyframes infinite-loop-invert {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
   }
 }

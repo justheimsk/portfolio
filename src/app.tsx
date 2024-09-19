@@ -204,6 +204,7 @@ const App = () => {
           </div>
         </Section>
       </Container>
+      <Tape className="mt-8" invert />
     </>
   );
 };
