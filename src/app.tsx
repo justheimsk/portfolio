@@ -1,11 +1,10 @@
-import { useEffect, useState } from 'react';
-import { Navbar } from './components/layout/Navbar';
-import { UpperNavbar } from './components/layout/UpperNavbar';
+import {useEffect, useState} from 'react';
+import {Navbar} from './components/layout/Navbar';
+import {UpperNavbar} from './components/layout/UpperNavbar';
 import './global.css';
-import { CustomCursor } from './lib';
-import { Container } from './components/common/Container';
-import { Section } from './components/layout/Section';
-import { Button } from './components/common/Button';
+import {Container} from './components/common/Container';
+import {Section} from './components/layout/Section';
+import {Button} from './components/common/Button';
 import {
   FaDocker,
   FaDownload,
@@ -15,31 +14,32 @@ import {
   FaPlus,
   FaReact,
 } from 'react-icons/fa6';
-import { RiNextjsFill } from 'react-icons/ri';
-import { TbBrandCpp } from 'react-icons/tb';
-import { BiLogoPostgresql, BiLogoTypescript } from 'react-icons/bi';
-import { SiTailwindcss } from 'react-icons/si';
-import { useTranslation } from 'react-i18next';
-import { ProjectCard } from './components/common/ProjectCard';
-import { Tape } from './components/common/Tape';
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/react';
+import {RiNextjsFill} from 'react-icons/ri';
+import {TbBrandCpp} from 'react-icons/tb';
+import {BiLogoPostgresql, BiLogoTypescript} from 'react-icons/bi';
+import {SiTailwindcss} from 'react-icons/si';
+import {useTranslation} from 'react-i18next';
+import {ProjectCard} from './components/common/ProjectCard';
+import {Tape} from './components/common/Tape';
+import {Analytics} from '@vercel/analytics/react';
+import {SpeedInsights} from '@vercel/speed-insights/react';
 import langs from './shared/langs';
 import * as Orbit from './components/layout/Orbit';
 import * as Skills from './shared/skills';
 import InitObservers from './lib/utils/InitObservers';
-import { InitWebWorker } from './lib/utils/InitWebWorker';
+import {InitWebWorker} from './lib/utils/InitWebWorker';
 import * as Modal from './components/common/Modal';
+import {ContactForm} from './components/layout/ContactForm';
 
 const App = () => {
-  const { t } = useTranslation();
+  const {t} = useTranslation();
   const [opIndex, setOpIndex] = useState<number>(0);
   const [modalActive, setModalActive] = useState<boolean>(false);
 
   useEffect(() => {
     try {
       const thread = InitWebWorker('stars');
-      if(thread) InitObservers(setOpIndex, thread.canvas, thread.worker);
+      if (thread) InitObservers(setOpIndex, thread.canvas, thread.worker);
 
       document.documentElement.lang = Object.keys(langs).includes(
         navigator.language || 'en-US',
@@ -47,10 +47,10 @@ const App = () => {
         ? navigator.language
         : 'en-US';
 
-      const effects = [new CustomCursor()];
-      for (const effect of effects) {
-        effect.init();
-      }
+      //const effects = [new CustomCursor()];
+      //for (const effect of effects) {
+      //  effect.init();
+      //}
     } catch (err) {
       console.log('Could not initialize effects: ', err);
     }
@@ -169,12 +169,11 @@ const App = () => {
         <Section id="skills" className="mt-8 text-white">
           <div className="text-center flex flex-col gap-2 max-w-[500px] mx-auto">
             <span className="text-md text-secondary tracking-widest">
-              FULLSTACK
+              {t('skills.uptitle')}
             </span>
-            <h2 className="text-4xl font-bold">Habilidades</h2>
+            <h2 className="text-4xl font-bold">{t('skills.title')}</h2>
             <p className="text-gray-300">
-              As habilidades e tecnologias que aprendi e me aperfeiçoei
-              estudando programação
+              {t('skills.subtitle')}
             </p>
           </div>
           <div className="flex items-center justify-center gap-4 sm:gap-12 flex-wrap">
@@ -205,6 +204,11 @@ const App = () => {
         </Section>
       </Container>
       <Tape className="mt-8" invert />
+      <Container id="contact" className="my-12">
+        <Section className="flex items-center justify-center">
+          <ContactForm />
+        </Section>
+      </Container >
     </>
   );
 };

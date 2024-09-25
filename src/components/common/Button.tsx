@@ -1,4 +1,4 @@
-import { excludeProps } from '../../lib/utils/PropsExcluder';
+import {excludeProps} from '../../lib/utils/PropsExcluder';
 
 export type ButtonStyles = 'normal' | 'outline';
 export type ButtonRounded =
@@ -17,6 +17,7 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   bsize?: ButtonSize;
   bhref?: string;
   clickEffect?: ButtonClickEffect;
+  btype?: "submit" | "reset" | undefined;
 }
 
 export function Button(props: ButtonProps) {
@@ -36,11 +37,11 @@ export function Button(props: ButtonProps) {
   return (
     <>
       {!props.bhref ? (
-        <button {...excluded} className={classname}>
+        <button type={props.btype} {...excluded} className={classname}>
           {props.children}
         </button>
       ) : (
-        <a
+        <a type={props.btype}
           {...(excluded as React.HTMLAttributes<HTMLAnchorElement>)}
           target="_blank"
           rel="noreferrer"

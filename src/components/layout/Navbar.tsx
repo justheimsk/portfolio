@@ -1,17 +1,17 @@
-import { FaDiscord, FaGithub } from 'react-icons/fa6';
-import { Container } from '../common/Container';
-import { Button } from '../common/Button';
-import { RxHamburgerMenu } from 'react-icons/rx';
-import { FaTimes } from 'react-icons/fa';
-import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { IoLanguage } from 'react-icons/io5';
+import {FaDiscord, FaGithub} from 'react-icons/fa6';
+import {Container} from '../common/Container';
+import {Button} from '../common/Button';
+import {RxHamburgerMenu} from 'react-icons/rx';
+import {FaTimes} from 'react-icons/fa';
+import {useState} from 'react';
+import {useTranslation} from 'react-i18next';
+import {IoLanguage} from 'react-icons/io5';
 import * as Dropdown from '../common/Dropdown';
 import langs from '../../shared/langs';
 
 export function Navbar() {
   const [active, setActive] = useState(false);
-  const { t, i18n } = useTranslation();
+  const {t, i18n} = useTranslation();
 
   return (
     <>
@@ -92,7 +92,7 @@ export function NavbarBrandName() {
 }
 
 export function NavbarMenu() {
-  const { t } = useTranslation();
+  const {t} = useTranslation();
 
   return (
     <>
@@ -101,7 +101,7 @@ export function NavbarMenu() {
       </NavbarLink>
       <NavbarLink nhref="projects">{t('navbar.projects')}</NavbarLink>
       <NavbarLink nhref="skills">{t('navbar.skills')}</NavbarLink>
-      <NavbarLink>{t('navbar.contact')}</NavbarLink>
+      <NavbarLink nhref="contact">{t('navbar.contact')}</NavbarLink>
     </>
   );
 }
@@ -116,7 +116,7 @@ export function NavbarLink(props: NavbarLinkProps) {
   function scrollTo() {
     if (props.nhref) {
       const element = document.getElementById(props.nhref);
-      element?.scrollIntoView({ behavior: 'smooth' });
+      element?.scrollIntoView({behavior: 'smooth'});
     }
   }
 
