@@ -4,33 +4,45 @@
     "code": "nl-NL"
   },
   "translation": {
-    "title": "Innovatieve Fullstack Ontwikkelaar",
-    "subtitle": "Hallo! Ik ben een Fullstack ontwikkelaar met een passie voor het creëren van innovatieve en efficiënte oplossingen. Met ervaring in verschillende technologieën ben ik voortdurend op zoek naar nieuwe uitdagingen en kansen om ideeën in de praktijk te brengen.",
+    "title": "Fullstack Ontwikkelaar",
+    "subtitle": "Hallo! Ik ben een Fullstack ontwikkelaar met een passie voor het creëren van innovatieve en efficiënte oplossingen. Met ervaring in verschillende technologieën ben ik voortdurend op zoek naar nieuwe uitdagingen en kansen om ideeën om te zetten in werkelijkheid.",
     "buttons": {
-      "projects": "Bekijk mijn projecten",
+      "projects": "Verken mijn projecten",
       "resume": "Download CV"
     },
     "navbar": {
-      "home": "Start",
+      "home": "Home",
       "projects": "Projecten",
       "skills": "Vaardigheden",
       "contact": "Contact"
     },
-    "uppernavbar": "Beschikbaar voor Aanwerving",
+    "skills": {
+      "title": "Vaardigheden",
+      "uptitle": "FULLSTACK",
+      "subtitle": "De vaardigheden en technologieën die ik heb geleerd en verbeterd tijdens het studeren van programmeren"
+    },
+    "contact": {
+      "title": "Stuur me een bericht!",
+      "name": "Naam",
+      "subject": "Onderwerp",
+      "message": "Bericht",
+      "send": "Bericht verzenden"
+    },
+    "uppernavbar": "Beschikbaar voor Huur",
     "projects": {
-      "title": "Belangrijke Projecten",
-      "subtitle": "Persoonlijke projecten die professioneel zijn ontwikkeld, volgens best practices en met schone code.",
-      "uptitle": "DE BESTEN",
+      "title": "Hoofdprojecten",
+      "subtitle": "Persoonlijke projecten die professioneel zijn ontwikkeld, met inachtneming van best practices en schone code.",
+      "uptitle": "DE BESTE",
       "list": {
         "cordiumjs": {
-          "description": "Een bibliotheek geschreven in TypeScript voor communicatie met Discord-servers, ontworpen met een focus op prestaties. Deze bibliotheek ondersteunt Multicore (meerdere CPU-kernen)."
+          "description": "Een bibliotheek geschreven in TypeScript voor communicatie met Discord-servers, gemaakt met focus op prestaties. Deze bibliotheek ondersteunt Multicore (meerdere CPU-kernen)."
         },
         "restman": {
-          "description": "Een project dat de Postman-website opnieuw creëert voor educatieve doeleinden. Deze site is bedoeld om de belangrijkste functionaliteit van Postman te implementeren."
+          "description": "Een project dat de Postman-website nabouwt voor educatieve doeleinden. Deze site heeft als doel de belangrijkste functie van Postman te implementeren."
         },
         "dentist": {
           "title": "Websites voor Tandartsen",
-          "description": "Een eenvoudige website die een landingspagina voor een tandartspraktijk simuleert, gemaakt met NextJS, TailwindCSS en Shadcn/UI."
+          "description": "Een eenvoudige website die een landingspagina voor een tandheelkundige praktijk simuleert, gemaakt met NextJS, TailwindCSS en Shadcn/UI."
         },
         "all": {
           "stack": "10 Projecten",

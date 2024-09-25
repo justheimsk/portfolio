@@ -16,6 +16,18 @@
       "skills": "Habilidades",
       "contact": "Contato"
     },
+    "skills": {
+      "title": "Habilidades",
+      "uptitle": "FULLSTACK",
+      "subtitle": "As habilidades e tecnologias que aprendi e me aperfeiçoei estudando programação"
+    },
+    "contact": {
+      "title": "Me mande uma mensagem!",
+      "name": "Nome",
+      "subject": "Assunto",
+      "message": "Mensagem",
+      "send": "Enviar mensagem"
+    },
     "uppernavbar": "Disponível para Contratação",
     "projects": {
       "title": "Principais Projetos",

@@ -4,11 +4,11 @@
     "code": "it-IT"
   },
   "translation": {
-    "title": "Sviluppatore Fullstack Innovativo",
-    "subtitle": "Ciao! Sono uno sviluppatore Fullstack appassionato di creare soluzioni innovative ed efficienti. Con esperienza in diverse tecnologie, sono costantemente alla ricerca di nuove sfide e opportunità per trasformare le idee in realtà.",
+    "title": "Sviluppatore Fullstack",
+    "subtitle": "Ciao! Sono uno sviluppatore Fullstack appassionato di creare soluzioni innovative ed efficienti. Con esperienza in diverse tecnologie, sono costantemente alla ricerca di nuove sfide e opportunità per trasformare idee in realtà.",
     "buttons": {
       "projects": "Esplora i miei progetti",
-      "resume": "Scarica il curriculum"
+      "resume": "Scarica il CV"
     },
     "navbar": {
       "home": "Home",
@@ -16,17 +16,29 @@
       "skills": "Competenze",
       "contact": "Contatto"
     },
-    "uppernavbar": "Disponibile per Assunzioni",
+    "skills": {
+      "title": "Competenze",
+      "uptitle": "FULLSTACK",
+      "subtitle": "Le competenze e le tecnologie che ho appreso e perfezionato studiando programmazione"
+    },
+    "contact": {
+      "title": "Inviami un messaggio!",
+      "name": "Nome",
+      "subject": "Oggetto",
+      "message": "Messaggio",
+      "send": "Invia messaggio"
+    },
+    "uppernavbar": "Disponibile per Assunzione",
     "projects": {
       "title": "Progetti Principali",
       "subtitle": "Progetti personali sviluppati in modo professionale, seguendo le migliori pratiche e con codice pulito.",
       "uptitle": "I MIGLIORI",
       "list": {
         "cordiumjs": {
-          "description": "Una libreria scritta in TypeScript per comunicare con i server di Discord, creata con un focus sulle prestazioni. Questa libreria supporta il Multicore (più nuclei della CPU)."
+          "description": "Una libreria scritta in TypeScript per la comunicazione con i server di Discord, creata con un focus sulle prestazioni. Questa libreria supporta il Multicore (più core della CPU)."
         },
         "restman": {
-          "description": "Un progetto che ricrea il sito di Postman a scopi educativi. Questo sito mira a implementare la funzione principale di Postman."
+          "description": "Un progetto che ricrea il sito Postman per scopi educativi. Questo sito mira a implementare la funzione principale di Postman."
         },
         "dentist": {
           "title": "Siti per Dentisti",

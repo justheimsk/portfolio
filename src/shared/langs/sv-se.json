@@ -4,8 +4,8 @@
     "code": "sv-SE"
   },
   "translation": {
-    "title": "Innovativ Fullstack-utvecklare",
-    "subtitle": "Hej! Jag är en Fullstack-utvecklare som brinner för att skapa innovativa och effektiva lösningar. Med erfarenhet av olika teknologier är jag ständigt på jakt efter nya utmaningar och möjligheter att förverkliga idéer.",
+    "title": "Fullstack Utvecklare",
+    "subtitle": "Hej! Jag är en Fullstack utvecklare med en passion för att skapa innovativa och effektiva lösningar. Med erfarenhet av olika teknologier är jag ständigt på jakt efter nya utmaningar och möjligheter att förverkliga idéer.",
     "buttons": {
       "projects": "Utforska mina projekt",
       "resume": "Ladda ner CV"
@@ -16,17 +16,29 @@
       "skills": "Färdigheter",
       "contact": "Kontakt"
     },
+    "skills": {
+      "title": "Färdigheter",
+      "uptitle": "FULLSTACK",
+      "subtitle": "De färdigheter och teknologier jag har lärt mig och förbättrat under mina studier inom programmering"
+    },
+    "contact": {
+      "title": "Skicka mig ett meddelande!",
+      "name": "Namn",
+      "subject": "Ämne",
+      "message": "Meddelande",
+      "send": "Skicka meddelande"
+    },
     "uppernavbar": "Tillgänglig för Anställning",
     "projects": {
       "title": "Huvudprojekt",
-      "subtitle": "Personliga projekt som har utvecklats professionellt, med goda praxis och ren kod.",
+      "subtitle": "Personliga projekt som har utvecklats professionellt, med beaktande av bästa praxis och ren kod.",
       "uptitle": "DE BÄSTA",
       "list": {
         "cordiumjs": {
           "description": "Ett bibliotek skrivet i TypeScript för kommunikation med Discord-servrar, skapat med fokus på prestanda. Detta bibliotek stödjer Multicore (flera CPU-kärnor)."
         },
         "restman": {
-          "description": "Ett projekt som återskapar Postman-webbplatsen för utbildningsändamål. Denna webbplats syftar till att implementera Postmans huvudsakliga funktionalitet."
+          "description": "Ett projekt som återskapar Postman-webbplatsen för utbildningsändamål. Denna webbplats syftar till att implementera Postmans huvudfunktion."
         },
         "dentist": {
           "title": "Webbplatser för Tandläkare",

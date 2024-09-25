@@ -4,10 +4,10 @@
     "code": "fr-FR"
   },
   "translation": {
-    "title": "Développeur Fullstack Innovant",
-    "subtitle": "Bonjour ! Je suis un développeur Fullstack passionné par la création de solutions innovantes et efficaces. Fort d'une expérience dans diverses technologies, je suis constamment à la recherche de nouveaux défis et opportunités pour transformer les idées en réalité.",
+    "title": "Développeur Fullstack",
+    "subtitle": "Bonjour ! Je suis un développeur Fullstack passionné par la création de solutions innovantes et efficaces. Avec de l'expérience dans diverses technologies, je suis constamment à la recherche de nouveaux défis et d'opportunités pour transformer des idées en réalité.",
     "buttons": {
-      "projects": "Explorez mes projets",
+      "projects": "Découvrez mes projets",
       "resume": "Télécharger le CV"
     },
     "navbar": {
@@ -16,25 +16,37 @@
       "skills": "Compétences",
       "contact": "Contact"
     },
-    "uppernavbar": "Disponible pour embauche",
+    "skills": {
+      "title": "Compétences",
+      "uptitle": "FULLSTACK",
+      "subtitle": "Les compétences et technologies que j'ai apprises et perfectionnées en étudiant la programmation"
+    },
+    "contact": {
+      "title": "Envoyez-moi un message !",
+      "name": "Nom",
+      "subject": "Objet",
+      "message": "Message",
+      "send": "Envoyer le message"
+    },
+    "uppernavbar": "Disponible pour Embauche",
     "projects": {
-      "title": "Projets Clés",
-      "subtitle": "Projets personnels développés de manière professionnelle, suivant les meilleures pratiques et avec un code propre.",
+      "title": "Projets Principaux",
+      "subtitle": "Projets personnels développés de manière professionnelle, suivant les bonnes pratiques et un code propre.",
       "uptitle": "LES MEILLEURS",
       "list": {
         "cordiumjs": {
-          "description": "Une bibliothèque écrite en TypeScript pour communiquer avec les serveurs Discord, créée avec un accent sur la performance. Cette bibliothèque supporte le Multicore (plusieurs cœurs de CPU)."
+          "description": "Une bibliothèque écrite en TypeScript pour communiquer avec les serveurs Discord, créée avec un accent sur la performance. Cette bibliothèque prend en charge le Multicore (plusieurs cœurs de CPU)."
         },
         "restman": {
-          "description": "Un projet qui recrée le site Postman à des fins éducatives. Ce site vise à implémenter la fonction principale de Postman."
+          "description": "Un projet qui recrée le site Postman à des fins éducatives. Ce site vise à mettre en œuvre la fonction principale de Postman."
         },
         "dentist": {
-          "title": "Sites pour Dentistes",
-          "description": "Un site simple simulant une page de destination pour une clinique dentaire, créé avec NextJS, TailwindCSS et Shadcn/UI."
+          "title": "Sites Web pour Dentistes",
+          "description": "Un site simple qui simule une page d'atterrissage pour une clinique dentaire, créé en utilisant NextJS, TailwindCSS et Shadcn/UI."
         },
         "all": {
           "stack": "10 Projets",
-          "title": "Découvrez tous les projets sur GitHub !"
+          "title": "Voir tous les projets sur GitHub !"
         }
       }
     }

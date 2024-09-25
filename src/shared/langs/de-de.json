@@ -4,8 +4,8 @@
     "code": "de-DE"
   },
   "translation": {
-    "title": "Innovativer Fullstack-Entwickler",
-    "subtitle": "Hallo! Ich bin ein Fullstack-Entwickler, der leidenschaftlich daran interessiert ist, innovative und effiziente Lösungen zu schaffen. Mit Erfahrung in verschiedenen Technologien bin ich ständig auf der Suche nach neuen Herausforderungen und Möglichkeiten, Ideen in die Realität umzusetzen.",
+    "title": "Fullstack-Entwickler",
+    "subtitle": "Hallo! Ich bin ein Fullstack-Entwickler mit Leidenschaft für die Schaffung innovativer und effizienter Lösungen. Mit Erfahrung in verschiedenen Technologien suche ich ständig nach neuen Herausforderungen und Möglichkeiten, um Ideen in die Realität umzusetzen.",
     "buttons": {
       "projects": "Entdecken Sie meine Projekte",
       "resume": "Lebenslauf herunterladen"
@@ -16,17 +16,29 @@
       "skills": "Fähigkeiten",
       "contact": "Kontakt"
     },
-    "uppernavbar": "Verfügbar für Anstellungen",
+    "skills": {
+      "title": "Fähigkeiten",
+      "uptitle": "FULLSTACK",
+      "subtitle": "Die Fähigkeiten und Technologien, die ich beim Lernen der Programmierung erlernt und perfektioniert habe"
+    },
+    "contact": {
+      "title": "Schicken Sie mir eine Nachricht!",
+      "name": "Name",
+      "subject": "Betreff",
+      "message": "Nachricht",
+      "send": "Nachricht senden"
+    },
+    "uppernavbar": "Verfügbar für Einstellungen",
     "projects": {
-      "title": "Wichtige Projekte",
-      "subtitle": "Persönliche Projekte, die professionell entwickelt wurden, mit bewährten Methoden und sauberem Code.",
+      "title": "Hauptprojekte",
+      "subtitle": "Persönliche Projekte, die professionell entwickelt wurden, unter Einhaltung bewährter Praktiken und sauberem Code.",
       "uptitle": "DIE BESTEN",
       "list": {
         "cordiumjs": {
-          "description": "Eine in TypeScript geschriebene Bibliothek zur Kommunikation mit Discord-Servern, die mit Fokus auf Leistung erstellt wurde. Diese Bibliothek unterstützt Multicore (mehrere CPU-Kerne)."
+          "description": "Eine in TypeScript geschriebene Bibliothek für die Kommunikation mit Discord-Servern, die mit Fokus auf Leistung erstellt wurde. Diese Bibliothek unterstützt Multicore (mehrere CPU-Kerne)."
         },
         "restman": {
-          "description": "Ein Projekt, das die Postman-Website zu Bildungszwecken neu erstellt. Diese Website zielt darauf ab, die Hauptfunktionalität von Postman umzusetzen."
+          "description": "Ein Projekt, das die Postman-Website zu Bildungszwecken nachbildet. Diese Seite hat zum Ziel, die Hauptfunktion von Postman umzusetzen."
         },
         "dentist": {
           "title": "Websites für Zahnärzte",
@@ -34,7 +46,7 @@
         },
         "all": {
           "stack": "10 Projekte",
-          "title": "Sehen Sie alle Projekte auf GitHub!"
+          "title": "Alle Projekte auf GitHub ansehen!"
         }
       }
     }

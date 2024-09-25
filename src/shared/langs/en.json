@@ -4,8 +4,8 @@
     "code": "en-US"
   },
   "translation": {
-    "title": "A non-standard Fullstack developer",
-    "subtitle": "Hello! I am a Fullstack developer passionate about creating innovative and efficient solutions. With experience in various technologies, I am constantly seeking new challenges and opportunities to turn ideas into reality.",
+    "title": "Fullstack Developer",
+    "subtitle": "Hello! I am a Fullstack Developer with a passion for creating innovative and efficient solutions. With experience in various technologies, I am constantly seeking new challenges and opportunities to turn ideas into reality.",
     "buttons": {
       "projects": "Explore my projects",
       "resume": "Download resume"
@@ -16,21 +16,33 @@
       "skills": "Skills",
       "contact": "Contact"
     },
+    "skills": {
+      "title": "Skills",
+      "uptitle": "FULLSTACK",
+      "subtitle": "The skills and technologies I have learned and perfected while studying programming"
+    },
+    "contact": {
+      "title": "Send me a message!",
+      "name": "Name",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send message"
+    },
     "uppernavbar": "Available for Hire",
     "projects": {
-      "title": "Key Projects",
-      "subtitle": "Personal projects developed professionally, following best practices and with clean code.",
+      "title": "Main Projects",
+      "subtitle": "Personal projects developed professionally, following best practices and clean code.",
       "uptitle": "THE BEST",
       "list": {
         "cordiumjs": {
-          "description": "A library written in TypeScript for communicating with Discord servers, created with a focus on performance. This library supports Multicore (multiple CPU cores)."
+          "description": "A library written in TypeScript for communication with Discord servers, created with a focus on performance. This library supports Multicore (multiple CPU cores)."
         },
         "restman": {
-          "description": "A project that recreates the Postman website for educational purposes. This site aims to implement the main functionality of Postman."
+          "description": "A project that recreates the Postman website for educational purposes. This site aims to implement the main function of Postman."
         },
         "dentist": {
-          "title": "Sites for Dentists",
-          "description": "A simple site simulating a landing page for a dental clinic, created using NextJS, TailwindCSS, and Shadcn/UI."
+          "title": "Websites for Dentists",
+          "description": "A simple website that simulates a landing page for a dental clinic, created using NextJS, TailwindCSS, and Shadcn/UI."
         },
         "all": {
           "stack": "10 Projects",

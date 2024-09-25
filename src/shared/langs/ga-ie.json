@@ -4,11 +4,11 @@
     "code": "ga-IE"
   },
   "translation": {
-    "title": "Forbróir Fullstack Nuálach",
-    "subtitle": "Dia duit! Is forbróir Fullstack mé atá paiseanta faoi chruthú réitigh nuálacha agus éifeachtacha. Le taithí ar roinnt teicneolaíochtaí, táim i gcónaí ag lorg dúshláin nua agus deiseanna chun smaointe a thabhairt chun réaltachta.",
+    "title": "Forbróir Fullstack",
+    "subtitle": "Dia dhuit! Is forbróir Fullstack mé a bhfuil paisean agam do réitigh nuálacha agus éifeachtacha a chruthú. Le taithí i teicneolaíochtaí éagsúla, táim i gcónaí ag cuardach dúshláin nua agus deiseanna chun smaointe a chur i gcrích.",
     "buttons": {
-      "projects": "Fiosraigh mo thionscadail",
-      "resume": "Íoslódáil CV"
+      "projects": "Féach ar mo thionscadail",
+      "resume": "Íoslódáil mo CV"
     },
     "navbar": {
       "home": "Baile",
@@ -16,21 +16,33 @@
       "skills": "Scileanna",
       "contact": "Teagmháil"
     },
-    "uppernavbar": "Ar fáil le haghaidh fostaíochta",
+    "skills": {
+      "title": "Scileanna",
+      "uptitle": "FULLSTACK",
+      "subtitle": "Na scileanna agus teicneolaíochtaí a d'fhoghlaim mé agus a d'fhorbair mé agus mé ag staidéar ar an gclárú"
+    },
+    "contact": {
+      "title": "Seol teachtaireacht chugam!",
+      "name": "Ainm",
+      "subject": "Ábhar",
+      "message": "Teachtaireacht",
+      "send": "Seol teachtaireacht"
+    },
+    "uppernavbar": "Ar fáil le haghaidh Conradh",
     "projects": {
-      "title": "Tionscadail Tábhachtacha",
-      "subtitle": "Tionscadail phearsanta a fhorbraíodh go gairmiúil, ag cloí le cleachtais mhaith agus cód glan.",
-      "uptitle": "NA RÍ-THÁBSTÁLA",
+      "title": "Tionscadail Príomhacha",
+      "subtitle": "Tionscadail phearsanta a forbraíodh go gairmiúil, ag leanúint cleachtas maith agus cóid ghlan.",
+      "uptitle": "NA BESSA",
       "list": {
         "cordiumjs": {
-          "description": "Leabharlann scríofa i TypeScript le haghaidh cumarsáide le freastalaithe Discord, atá cruthaithe le béim ar fheidhmíocht. Tacaíonn an leabharlann seo le Multicore (nátaí CPU il)."
+          "description": "Leabharlann scríofa i TypeScript le haghaidh cumarsáide le freastalaithe Discord, cruthaithe le fócas ar fheidhmíocht. Tacaíonn an leabharlann seo le Multicore (núcleaí CPU il)."
         },
         "restman": {
-          "description": "Tionscadal a atógann suíomh Postman do chuspóirí oideachais. Tá sé mar aidhm ag an suíomh seo feidhmiúlacht phríomha Postman a chur i bhfeidhm."
+          "description": "Tionscadal a dhéanann atógáil ar shuíomh Gréasáin Postman le haghaidh crícheanna oideachais. Tá sé mar aidhm ag an suíomh seo an príomhfheidhm atá ag Postman a chur i bhfeidhm."
         },
         "dentist": {
-          "title": "Suímh ghréasáin do Dhochtúirí Fiacla",
-          "description": "Suíomh simplí atá ag samhlú leathanach tuirlingthe do chlionadh fiacla, cruthaithe le NextJS, TailwindCSS agus Shadcn/UI."
+          "title": "Láithreáin ghréasáin do Dhochtúirí Fiaclóireachta",
+          "description": "Láithreán ghréasáin simplí a simulates leathanach tuairisc a bhaineann le clinic fiaclóireachta, cruthaithe le NextJS, TailwindCSS agus Shadcn/UI."
         },
         "all": {
           "stack": "10 Tionscadal",
